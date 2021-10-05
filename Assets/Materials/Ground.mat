@@ -100,7 +100,7 @@ Material:
     m_Floats:
     - Brightness_Rim: 5
     - Curve_Depth: 0.005
-    - Depth_Divider: 0.03
+    - Depth_Divider: 0.3
     - Rim_Power: 10
     - Tiling: 1
     - Toon_Ramp_Offset: 0.5
