@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2579757853372708164}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 0.124}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 5725849710144823012}
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3390170143874461735}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e06eb22ecb918294abd4783a324c6b46, type: 3}
   m_Name: 
@@ -280,7 +280,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  _moveSpeed: 20
+  _moveSpeed: 10
   _rotateSpeed: 110
 --- !u!114 &8745342869099935917
 MonoBehaviour:
@@ -354,7 +354,7 @@ MonoBehaviour:
   _shootFX: {fileID: 3285547262505742044, guid: 31d86f0d44afc3743aa627298cd6081c, type: 3}
   _laser: {fileID: 8636117959940609601}
   _particalCollisions: {fileID: 8470029511136272794}
-  _degrees: 5
+  _spaceShip: {fileID: 2920290470422491134}
   _speed: 80
 --- !u!114 &1458372772023878372
 MonoBehaviour:

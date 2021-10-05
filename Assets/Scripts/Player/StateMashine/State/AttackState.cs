@@ -7,10 +7,9 @@ public class AttackState : StatePlayer
     [SerializeField] private ParticleSystem _shootFX;
     [SerializeField] private GameObject _laser;
     [SerializeField] private ParticalCollisions _particalCollisions;
+    [SerializeField] private Transform _spaceShip;
     [Header("Settings of Shoot Position")]
-    [SerializeField] private float _degrees;
     [SerializeField] private float _speed;
-    [Header("Delay between shoot")]
 
     private Animator _animator;
     private PlayerShooter _playerShooter;
@@ -82,9 +81,9 @@ public class AttackState : StatePlayer
     private void RotatePlayer()
     {
         if (_direction == 1)
-            transform.Rotate(Vector3.down, _speed * Time.deltaTime);
+            _spaceShip.Rotate(Vector3.down, _speed * Time.deltaTime);
         else
-            transform.Rotate(Vector3.up, _speed * Time.deltaTime);
+            _spaceShip.Rotate(Vector3.up, _speed * Time.deltaTime);
     }
 
     private void Attack()

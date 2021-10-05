@@ -2086,7 +2086,7 @@ MonoBehaviour:
   _panelOptions: {fileID: 2130129670}
   _openOptions: {fileID: 95268456}
   _closeOptions: {fileID: 210667705}
-  _soundMaster: {fileID: 0}
+  _soundMaster: {fileID: 1744793690}
   _onSoundButton: {fileID: 211826039}
   _offSoundButton: {fileID: 1859149316}
 --- !u!1001 &1123003469
@@ -2818,6 +2818,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1744793689}
+  - component: {fileID: 1744793690}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -2839,6 +2840,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1744793690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744793688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b36b6a1dba9f9a748a4d03adbb5ca034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _soundMaster: {fileID: 24300002, guid: c4691fac895ed3742bd753831a091b08, type: 2}
 --- !u!1 &1770949438
 GameObject:
   m_ObjectHideFlags: 0
@@ -4226,7 +4240,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 3390170144703871088}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e06eb22ecb918294abd4783a324c6b46, type: 3}
   m_Name: 

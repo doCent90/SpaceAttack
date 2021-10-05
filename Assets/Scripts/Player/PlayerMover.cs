@@ -11,6 +11,7 @@ public class PlayerMover : MonoBehaviour
 
     private int _currentPointIndex = 0;
     private Animator _animator;
+    private Transform _idlePositison;
 
     private const string RunAnimation = "Run";
 
@@ -25,6 +26,8 @@ public class PlayerMover : MonoBehaviour
     private void Start()
     {
         _animator = GetComponent<Animator>();
+        _idlePositison = transform;
+
         HasCurrentPositions = false;
         IsLastWayPoint = false;
     }
@@ -49,8 +52,9 @@ public class PlayerMover : MonoBehaviour
     {
         if (!IsLastWayPoint)
         {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, _points[_currentPointIndex].rotation, _rotateSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.RotateTowards(_idlePositison.rotation, _points[_currentPointIndex].rotation, _rotateSpeed * Time.deltaTime);
             transform.position = Vector3.MoveTowards(transform.position, _points[_currentPointIndex].position, _moveSpeed * Time.deltaTime);
+
             _animator.SetBool(RunAnimation, true);
             HasCurrentPositions = false;
         }
