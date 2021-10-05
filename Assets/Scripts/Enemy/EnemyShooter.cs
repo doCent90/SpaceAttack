@@ -6,6 +6,7 @@ public class EnemyShooter : MonoBehaviour
 {
     [SerializeField] private EnemyBullet _bulletEnemyTamplate;
     [SerializeField] private Transform _shootPoint;
+    [SerializeField] private ParticleSystem _shot;
     [SerializeField] private float Delay;
 
     private Animator _animator;
@@ -44,6 +45,8 @@ public class EnemyShooter : MonoBehaviour
             _hasShooted = true;
             ShotFired?.Invoke();
             _animator.SetTrigger(ShootAnimation);
+            _shot.Play();
+
             enabled = false;
         }
     }

@@ -7,7 +7,7 @@ public class AttackState : StatePlayer
     [SerializeField] private ParticleSystem _shootFX;
     [SerializeField] private GameObject _laser;
     [SerializeField] private ParticalCollisions _particalCollisions;
-    [SerializeField] private Transform _spaceShip;
+    [SerializeField] private Transform _gunPoint;
     [Header("Settings of Shoot Position")]
     [SerializeField] private float _speed;
 
@@ -75,15 +75,15 @@ public class AttackState : StatePlayer
 
     private void SetAnglePlayer()
     {
-        transform.eulerAngles = Vector3.zero;
+        //_spaceShip.eulerAngles = new Vector3(_spaceShip.position.x, 0, 0);
     }
 
     private void RotatePlayer()
     {
         if (_direction == 1)
-            _spaceShip.Rotate(Vector3.down, _speed * Time.deltaTime);
+            _gunPoint.Rotate(Vector3.down, _speed * Time.deltaTime);
         else
-            _spaceShip.Rotate(Vector3.up, _speed * Time.deltaTime);
+            _gunPoint.Rotate(Vector3.up, _speed * Time.deltaTime);
     }
 
     private void Attack()

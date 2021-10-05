@@ -18,11 +18,6 @@ public class ECparticleColorChangerMaster : MonoBehaviour {
     public bool applyChanges = false;
     public bool Keep_applyChanges = false;
 
-    void Start()
-    {
-
-    }
-
     void Update()
      {  
         if (applyChanges || Keep_applyChanges)
