@@ -18,6 +18,8 @@ public class AttackState : StatePlayer
     private int _direction = 1;
     private int _attackCount = 1;
 
+    private const int LeftRotate = 1;
+    private const int RightRotate = -1;
     private const float DelayBetweenShoot = 0.1f;
     private const float TimeScaleNormal = 1f;
     private const float TimeScaleRapid = 0.4f;
@@ -30,14 +32,14 @@ public class AttackState : StatePlayer
     {
         Attacked?.Invoke(true);
 
-        SetAnglePlayer();
+        SetAngle();
 
         Time.timeScale = TimeScaleRapid;
 
-        if (_attackCount == 2)
-            _direction = -1;
+        if (_attackCount % 2 == 0)
+            _direction = RightRotate;
         else
-            _direction = 1;
+            _direction = LeftRotate;
 
         _laser.SetActive(true);
         _particalCollisions.enabled = true;
@@ -61,7 +63,7 @@ public class AttackState : StatePlayer
 
     private void Update()
     {
-        RotatePlayer();
+        RotateGun();
 
         _animator.SetBool(TargetAnimation, true);
         _elapsedTime += Time.deltaTime;
@@ -73,16 +75,16 @@ public class AttackState : StatePlayer
         }
     }
 
-    private void SetAnglePlayer()
+    private void SetAngle()
     {
         //_spaceShip.eulerAngles = new Vector3(_spaceShip.position.x, 0, 0);
     }
 
-    private void RotatePlayer()
+    private void RotateGun()
     {
-        if (_direction == 1)
+        if (_direction == LeftRotate)
             _gunPoint.Rotate(Vector3.down, _speed * Time.deltaTime);
-        else
+        else if (_direction == RightRotate)
             _gunPoint.Rotate(Vector3.up, _speed * Time.deltaTime);
     }
 

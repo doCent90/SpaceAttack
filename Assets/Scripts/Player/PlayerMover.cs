@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Player))]
 [RequireComponent(typeof(Animator))]
@@ -7,10 +8,10 @@ using DG.Tweening;
 public class PlayerMover : MonoBehaviour
 {
     [SerializeField] Transform[] _points;
-    [SerializeField] private float _moveSpeed;
-    [SerializeField] private float _rotateSpeed;
+    [SerializeField] private float _moveDuration;
 
     private int _currentPointIndex = 0;
+
     private Animator _animator;
     private Rigidbody _rigidbodySpceShip;
 
@@ -18,6 +19,8 @@ public class PlayerMover : MonoBehaviour
 
     public bool IsLastWayPoint { get; private set; }
     public bool HasCurrentPositions { get; private set; }
+
+    public UnityAction LastPointCompleted;
 
     private void OnEnable()
     {
@@ -33,27 +36,26 @@ public class PlayerMover : MonoBehaviour
     private void OnDisable()
     {
         _animator.SetBool(RunAnimation, false);
+
+        HasCurrentPositions = false;
     }
 
-    private void Update()
+    private void ChangeCurrentIndexPosition()
     {
-        if (transform.position == _points[_currentPointIndex].position)
+        if (_currentPointIndex == (_points.Length - 2))
         {
             _currentPointIndex++;
-            HasCurrentPositions = true;
+            LastPointCompleted?.Invoke();
+            Move();
         }
-
-        if (_currentPointIndex == (_points.Length - 1))
+        else if (_currentPointIndex == (_points.Length - 1))
         {
             IsLastWayPoint = true;
         }
-    }
-
-    private void Rotate()
-    {
-        if (!IsLastWayPoint)
+        else
         {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, _points[_currentPointIndex].rotation, _rotateSpeed * Time.deltaTime);
+            _currentPointIndex++;
+            HasCurrentPositions = true; 
         }
     }
 
@@ -64,7 +66,7 @@ public class PlayerMover : MonoBehaviour
             _animator.SetBool(RunAnimation, true);
             HasCurrentPositions = false;
 
-            _rigidbodySpceShip.DOMove(_points[_currentPointIndex].position, _moveSpeed);
+            _rigidbodySpceShip.DOMove(_points[_currentPointIndex].position, _moveDuration).SetEase(Ease.InOutBack).OnComplete(ChangeCurrentIndexPosition);
         }
     }
 }

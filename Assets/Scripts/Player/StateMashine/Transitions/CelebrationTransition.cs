@@ -6,9 +6,12 @@ public class CelebrationTransition : TransitionPlayer
 
     private void OnEnable()
     {
-        _playerMover = GetComponent<PlayerMover>();
-
         if (_playerMover.IsLastWayPoint)
             NeedTransit = true;
+    }
+
+    private void Start()
+    {
+        _playerMover = GetComponent<PlayerMover>();        
     }
 }

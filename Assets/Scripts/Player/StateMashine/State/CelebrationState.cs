@@ -8,12 +8,14 @@ public class CelebrationState : StatePlayer
 
     private const string VictoryAnimation = "Victory";
 
-    public event UnityAction Victory;
+    public event UnityAction Won;
 
     private void OnEnable()
     {
         _animator = GetComponent<Animator>();
         _animator.SetTrigger(VictoryAnimation);
-        Victory?.Invoke();
+        Won?.Invoke();
+
+        Debug.Log("Won");
     }
 }

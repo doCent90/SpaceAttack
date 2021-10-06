@@ -10,8 +10,6 @@ public class ButtonsUI : MonoBehaviour
     [SerializeField] private Button _buttonStart;
     [SerializeField] private Button _buttonRetry;
     [SerializeField] private Button _buttonContinue;
-    [Header("Event")]
-    [SerializeField] private Player _player;
     [Header("Settings")]
     [SerializeField] private GameObject _panelOptions;
     [SerializeField] private Button _openOptions;
@@ -21,6 +19,7 @@ public class ButtonsUI : MonoBehaviour
     [SerializeField] private Button _onSoundButton;
     [SerializeField] private Button _offSoundButton;
 
+    private Player _player;
     private CelebrationState _victory;
 
     public event UnityAction Clicked;
@@ -83,9 +82,11 @@ public class ButtonsUI : MonoBehaviour
 
     private void OnEnable()
     {
+        _player = FindObjectOfType<Player>();
         _victory = _player.GetComponent<CelebrationState>();
+
         _player.Died += ShowRetryButton;
-        _victory.Victory += ShowContinueButton;
+        _victory.Won += ShowContinueButton;
 
         Init();
     }
@@ -93,7 +94,7 @@ public class ButtonsUI : MonoBehaviour
     private void OnDisable()
     {
         _player.Died -= ShowRetryButton;
-        _victory.Victory -= ShowContinueButton;
+        _victory.Won -= ShowContinueButton;
     }
 
     private void Init()
