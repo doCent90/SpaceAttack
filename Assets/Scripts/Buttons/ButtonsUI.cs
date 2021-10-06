@@ -20,7 +20,7 @@ public class ButtonsUI : MonoBehaviour
     [SerializeField] private Button _offSoundButton;
 
     private Player _player;
-    private CelebrationState _victory;
+    private PlayerMover _playerMover;
 
     public event UnityAction Clicked;
 
@@ -83,10 +83,10 @@ public class ButtonsUI : MonoBehaviour
     private void OnEnable()
     {
         _player = FindObjectOfType<Player>();
-        _victory = _player.GetComponent<CelebrationState>();
+        _playerMover = _player.GetComponent<PlayerMover>();
 
         _player.Died += ShowRetryButton;
-        _victory.Won += ShowContinueButton;
+        _playerMover.LastPointCompleted += ShowContinueButton;
 
         Init();
     }
@@ -94,7 +94,7 @@ public class ButtonsUI : MonoBehaviour
     private void OnDisable()
     {
         _player.Died -= ShowRetryButton;
-        _victory.Won -= ShowContinueButton;
+        _playerMover.LastPointCompleted -= ShowContinueButton;
     }
 
     private void Init()

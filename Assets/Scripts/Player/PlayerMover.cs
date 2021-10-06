@@ -28,8 +28,6 @@ public class PlayerMover : MonoBehaviour
         _rigidbodySpceShip = GetComponent<Rigidbody>();
 
         HasCurrentPositions = false;
-        IsLastWayPoint = false;
-
         Move();
     }
 
@@ -45,28 +43,28 @@ public class PlayerMover : MonoBehaviour
         if (_currentPointIndex == (_points.Length - 2))
         {
             _currentPointIndex++;
-            LastPointCompleted?.Invoke();
             Move();
-        }
-        else if (_currentPointIndex == (_points.Length - 1))
-        {
-            IsLastWayPoint = true;
+            LastPointCompleted?.Invoke();
+
+            HasCurrentPositions = false;
+
+            Debug.Log("PreLastPoint");
         }
         else
         {
+            HasCurrentPositions = true;         
             _currentPointIndex++;
-            HasCurrentPositions = true; 
         }
     }
 
     private void Move()
     {
-        if (!IsLastWayPoint)
+        if (_currentPointIndex != _points.Length)
         {
             _animator.SetBool(RunAnimation, true);
-            HasCurrentPositions = false;
 
-            _rigidbodySpceShip.DOMove(_points[_currentPointIndex].position, _moveDuration).SetEase(Ease.InOutBack).OnComplete(ChangeCurrentIndexPosition);
+            var tweenMove = _rigidbodySpceShip.DOMove(_points[_currentPointIndex].position, _moveDuration);
+            tweenMove.SetEase(Ease.InOutBack).OnComplete(ChangeCurrentIndexPosition);
         }
     }
 }

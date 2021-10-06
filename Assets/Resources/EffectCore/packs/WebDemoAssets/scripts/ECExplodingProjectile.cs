@@ -1,8 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-/* THIS CODE IS JUST FOR PREVIEW AND TESTING */
-// Feel free to use any code and picking on it, I cannot guaratnee it will fit into your project
 public class ECExplodingProjectile : MonoBehaviour
 {
     public GameObject impactPrefab;
@@ -11,7 +8,6 @@ public class ECExplodingProjectile : MonoBehaviour
 
     public Rigidbody thisRigidbody;
 
-    public GameObject particleKillGroup;
     private Collider thisCollider;
 
     public bool LookRotation = true;
@@ -28,31 +24,11 @@ public class ECExplodingProjectile : MonoBehaviour
 
     private Vector3 previousPosition;
 
-    // Use this for initialization
     void Start()
     {
         thisRigidbody = GetComponent<Rigidbody>();
-        if (Missile)
-        {
-            missileTarget = GameObject.FindWithTag("Target").transform;
-        }
         thisCollider = GetComponent<Collider>();
         previousPosition = transform.position;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        /*     if(Input.GetButtonUp("Fire2"))
-             {
-                 Explode();
-             }*/
-        timer += Time.deltaTime;
-        if (timer >= explosionTimer && explodeOnTimer == true)
-        {
-            Explode();
-        }
-
     }
 
     void FixedUpdate()
@@ -60,7 +36,6 @@ public class ECExplodingProjectile : MonoBehaviour
         if (Missile)
         {
             projectileSpeed += projectileSpeed * projectileSpeedMultiplier;
-            //   transform.position = Vector3.MoveTowards(transform.position, missileTarget.transform.position, 0);
 
             transform.LookAt(missileTarget);
 
@@ -89,18 +64,6 @@ public class ECExplodingProjectile : MonoBehaviour
             Quaternion rot = Quaternion.FromToRotation(Vector3.forward, hit.normal);
             Vector3 pos = hit.point;
             Instantiate(impactPrefab, pos, rot);
-            if (!explodeOnTimer && Missile == false)
-            {
-                Destroy(gameObject);
-            }
-            else if (Missile == true)
-            {
-                thisCollider.enabled = false;
-                particleKillGroup.SetActive(false);
-                thisRigidbody.velocity = Vector3.zero;
-                Destroy(gameObject, 5);
-            }
-
         }
     }
 
@@ -116,27 +79,6 @@ public class ECExplodingProjectile : MonoBehaviour
             }
             Vector3 pos = contact.point;
             Instantiate(impactPrefab, pos, rot);
-            if (!explodeOnTimer && Missile == false)
-            {
-                Destroy(gameObject);
-            }
-            else if (Missile == true)
-            {
-
-                thisCollider.enabled = false;
-                particleKillGroup.SetActive(false);
-                thisRigidbody.velocity = Vector3.zero;
-
-                Destroy(gameObject, 5);
-
-            }
         }
     }
-
-    void Explode()
-    {
-        Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.Euler(0, 0, 0));
-        Destroy(gameObject);
-    }
-
 }
