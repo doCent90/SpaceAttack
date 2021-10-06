@@ -6,18 +6,9 @@ public class SoundsFXSettings : MonoBehaviour
     [SerializeField] private AudioMixerGroup _soundMaster;
 
     private const string MasterVolume = "Master";
-    private const float MinVolume = -70f;
+    private const float MinVolume = -79f;
 
     public bool IsSoundEnable { get; private set; }
-
-    private void OnEnable()
-    {
-        _soundMaster.audioMixer.GetFloat(MasterVolume, out float value);
-        if (value <= MinVolume)
-            IsSoundEnable = false;
-        else
-            IsSoundEnable = true;
-    }
 
     public void EnableSound()
     {
@@ -30,6 +21,13 @@ public class SoundsFXSettings : MonoBehaviour
         _soundMaster.audioMixer.SetFloat(MasterVolume, -80f);
         IsSoundEnable = false;
     }
-
     
+    private void OnEnable()
+    {
+        _soundMaster.audioMixer.GetFloat(MasterVolume, out float value);
+        if (value <= MinVolume)
+            IsSoundEnable = false;
+        else
+            IsSoundEnable = true;
+    }
 }

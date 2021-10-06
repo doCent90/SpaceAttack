@@ -102,17 +102,16 @@ public class ButtonsUI : MonoBehaviour
         _buttonRetry.gameObject.SetActive(false);
         _closeOptions.gameObject.SetActive(false);
         _buttonContinue.gameObject.SetActive(false);
-        _onSoundButton.gameObject.SetActive(false);
 
         if (_soundMaster.IsSoundEnable)
         {
-            _onSoundButton.gameObject.SetActive(false);
-            _offSoundButton.gameObject.SetActive(true);
+            _onSoundButton.gameObject.SetActive(true);
+            _offSoundButton.gameObject.SetActive(false);
         }
         else
         {
-            _onSoundButton.gameObject.SetActive(true);
-            _offSoundButton.gameObject.SetActive(false);
+            _onSoundButton.gameObject.SetActive(false);
+            _offSoundButton.gameObject.SetActive(true);
         }
     }
     

@@ -1,4 +1,5 @@
 using UnityEngine;
+using DG.Tweening;
 
 [RequireComponent(typeof(Player))]
 [RequireComponent(typeof(Animator))]
@@ -11,29 +12,31 @@ public class PlayerMover : MonoBehaviour
 
     private int _currentPointIndex = 0;
     private Animator _animator;
+    private Rigidbody _rigidbodySpceShip;
 
     private const string RunAnimation = "Run";
 
     public bool IsLastWayPoint { get; private set; }
     public bool HasCurrentPositions { get; private set; }
 
+    private void OnEnable()
+    {
+        _animator = GetComponent<Animator>();
+        _rigidbodySpceShip = GetComponent<Rigidbody>();
+
+        HasCurrentPositions = false;
+        IsLastWayPoint = false;
+
+        Move();
+    }
+
     private void OnDisable()
     {
         _animator.SetBool(RunAnimation, false);
     }
 
-    private void Start()
-    {
-        _animator = GetComponent<Animator>();
-
-        HasCurrentPositions = false;
-        IsLastWayPoint = false;
-    }
-
     private void Update()
     {
-        Move();
-
         if (transform.position == _points[_currentPointIndex].position)
         {
             _currentPointIndex++;
@@ -46,17 +49,22 @@ public class PlayerMover : MonoBehaviour
         }
     }
 
-    private void Move()
+    private void Rotate()
     {
         if (!IsLastWayPoint)
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, _points[_currentPointIndex].rotation, _rotateSpeed * Time.deltaTime);
-            transform.position = Vector3.MoveTowards(transform.position, _points[_currentPointIndex].position, _moveSpeed * Time.deltaTime);
-            
+        }
+    }
+
+    private void Move()
+    {
+        if (!IsLastWayPoint)
+        {
             _animator.SetBool(RunAnimation, true);
             HasCurrentPositions = false;
+
+            _rigidbodySpceShip.DOMove(_points[_currentPointIndex].position, _moveSpeed);
         }
-        else
-            _animator.SetBool(RunAnimation, false);
     }
 }
