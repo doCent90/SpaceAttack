@@ -9,18 +9,20 @@ public class AttackState : StatePlayer
     [SerializeField] private Transform _gunPlace;
     [Header("Settings of Shoot Position")]
     [SerializeField] private float _speed;
+    [Header("Targets")]
+    [SerializeField] private Enemy[] _targets;
 
     private PlayerShooter _playerShooter;
 
     private float _elapsedTime;
-    private int _direction = 1;
-    private int _attackCount = 1;
+    private int _indexTarget = 0;
 
     private const int LeftRotate = 1;
     private const int RightRotate = -1;
     private const float DelayBetweenShoot = 0.1f;
     private const float TimeScaleNormal = 1f;
     private const float TimeScaleRapid = 0.4f;
+    private const float _startAngle = 20f;
 
     public event UnityAction<bool> Attacked;
     public event UnityAction Shoted;
@@ -28,19 +30,12 @@ public class AttackState : StatePlayer
     private void OnEnable()
     {
         Attacked?.Invoke(true);
-
-        SetAngle();
+        SetStartAngle();
 
         Time.timeScale = TimeScaleRapid;
 
-        if (_attackCount % 2 == 0)
-            _direction = RightRotate;
-        else
-            _direction = LeftRotate;
-
         _laser.SetActive(true);
         _particalCollisions.enabled = true;
-        _attackCount++;
     }
 
     private void OnDisable()
@@ -69,17 +64,22 @@ public class AttackState : StatePlayer
         }
     }
 
-    private void SetAngle()
+    private void SetStartAngle()
     {
-        //_spaceShip.eulerAngles = new Vector3(_spaceShip.position.x, 0, 0);
+        _gunPlace.LookAt(_targets[_indexTarget].transform);
+        _gunPlace.eulerAngles += new Vector3(0, _startAngle, 0);
+        _indexTarget++;
     }
+
 
     private void RotateGun()
     {
-        if (_direction == LeftRotate)
-            _gunPlace.Rotate(Vector3.down, _speed * Time.deltaTime);
-        else if (_direction == RightRotate)
-            _gunPlace.Rotate(Vector3.up, _speed * Time.deltaTime);
+        _gunPlace.eulerAngles += new Vector3(0, _startAngle, 0);
+    }
+
+    private void RotateGun2()
+    {
+        _gunPlace.Rotate(Vector3.down, _speed * Time.deltaTime);
     }
 
     private void Attack()

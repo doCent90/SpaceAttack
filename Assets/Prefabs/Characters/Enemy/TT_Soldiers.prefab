@@ -1009,7 +1009,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8442623690604717372}
   - component: {fileID: 8442623690597485434}
-  - component: {fileID: 1833503670131638099}
   - component: {fileID: 6360068939760170766}
   - component: {fileID: 3546702063041742012}
   m_Layer: 3
@@ -1054,22 +1053,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1833503670131638099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8442623690604886364}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d9fb12c0a695064d8edc5fd0be0fe8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bulletEnemyTamplate: {fileID: -4036584330188725467, guid: 23a2bd742143e8847991b7bbcee36704, type: 3}
-  _shootPoint: {fileID: 2018488609776084959}
-  _shot: {fileID: 7737660328785430967}
-  Delay: 0.8
 --- !u!114 &6360068939760170766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1218,10 +1201,5 @@ PrefabInstance:
 --- !u!4 &7615391411751561961 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4074934030344262, guid: 722795f4bd4886a438dbd4c6ff443394, type: 3}
-  m_PrefabInstance: {fileID: 7611422043734510255}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &7737660328785430967 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 198304718135280408, guid: 722795f4bd4886a438dbd4c6ff443394, type: 3}
   m_PrefabInstance: {fileID: 7611422043734510255}
   m_PrefabAsset: {fileID: 0}

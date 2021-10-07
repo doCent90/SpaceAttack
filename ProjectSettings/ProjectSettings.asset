@@ -146,7 +146,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.DefaultCompany.SpaceAttack
+    Android: com.IJunior.SpaceAttack
     Standalone: com.DefaultCompany.Space-Attack
   buildNumber:
     Standalone: 0
