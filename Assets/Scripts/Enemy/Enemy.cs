@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private ParticleSystem _bloodFX;
     [SerializeField] private bool _isNextStageFighter;
 
+    private TargetDieTransition _transition;
     private EnemyMover _mover;
     private Player _player;
 
@@ -20,6 +21,7 @@ public class Enemy : MonoBehaviour
 
         if (_isNextStageFighter)
         {
+            _transition.OnTargetDied();
             Died?.Invoke();
         }
 
@@ -29,6 +31,7 @@ public class Enemy : MonoBehaviour
 
     private void OnEnable()
     {
+        _transition = FindObjectOfType<TargetDieTransition>();
         _mover = GetComponent<EnemyMover>();
         _player = FindObjectOfType<Player>();
         _player.Started += Init;
