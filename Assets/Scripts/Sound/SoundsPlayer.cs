@@ -8,13 +8,11 @@ public class SoundsPlayer : SoundsPlaying
         _player = GetComponentInParent<Player>();
         _playerShooter = GetComponentInParent<PlayerShooter>();
 
-        _player.Died += PlayDeath;
         _playerShooter.ShotFired += PlayShot;
     }
 
     private void OnDisable()
     {
-        _player.Died -= PlayDeath;
         _playerShooter.ShotFired -= PlayShot;
     }
 }

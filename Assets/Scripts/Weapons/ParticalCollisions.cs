@@ -4,10 +4,9 @@ public class ParticalCollisions : MonoBehaviour
 {
     private void OnParticleCollision(GameObject collision)
     {
-        if (collision.TryGetComponent(out EnemyShooter enemy))
+        if (collision.TryGetComponent(out Enemy enemy))
         {
-            enemy.enabled = true;
-            enabled = false;
+
         }
     }
 }

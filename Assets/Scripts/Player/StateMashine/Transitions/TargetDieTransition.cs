@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class TargetDieTransition : TransitionPlayer
 {
     public void OnTargetDied()

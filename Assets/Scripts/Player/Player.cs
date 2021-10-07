@@ -5,25 +5,18 @@ using UnityEngine.Events;
 [RequireComponent(typeof(PlayerShooter))]
 public class Player : MonoBehaviour
 {
-    private PlayerMover _playerMover;
-    private AttackState _attackState;
     private StateMachinePlayer _stateMachinePlayer;
 
-    public event UnityAction Died;
+    public event UnityAction Started;
 
-    public void TakeDamage()
+    private void OnEnable()
     {
-        _playerMover.enabled = false;
-        _attackState.enabled = false;
-        Died?.Invoke();
+        Started?.Invoke();
     }
 
     private void Start()
     {
-        _playerMover = GetComponent<PlayerMover>();
-        _attackState = GetComponent<AttackState>();
         _stateMachinePlayer = GetComponent<StateMachinePlayer>();
-
         _stateMachinePlayer.enabled = true;
     }
 }

@@ -9,7 +9,6 @@ public class ModelAnimator : MonoBehaviour
     private AttackState _attack;
 
     private const string RunAnimation = "Run";
-    private const string DieAnimation = "Die";
     private const string ShootAnimation = "Shoot";
     private const string TargetAnimation = "LockTarget";
 
@@ -19,7 +18,6 @@ public class ModelAnimator : MonoBehaviour
         _mover = GetComponent<PlayerMover>();
         _attack = GetComponent<AttackState>();
 
-        _player.Died += Die;
         _mover.Moved += Move;
         _attack.Shoted += Shot;
         _attack.Attacked += LockTarget;
@@ -38,10 +36,5 @@ public class ModelAnimator : MonoBehaviour
     private void Shot()
     {
         _animator.SetTrigger(ShootAnimation);
-    }
-
-    private void Die()
-    {
-        _animator.SetTrigger(DieAnimation);
     }
 }

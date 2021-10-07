@@ -1,56 +1,46 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(EnemyShooter))]
-[RequireComponent(typeof(UnityEngine.Animator))]
+[RequireComponent(typeof(Animator))]
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _bloodFX;
     [SerializeField] private bool _isNextStageFighter;
 
-    private TargetDieTransition _transition;
-    private UnityEngine.Animator _animator;
+    private EnemyMover _mover;
     private Player _player;
 
-    private const string DieAnimation = "Die";
-    private const string VictoryAnimation = "Victory";
+    public Player Player => _player;
 
     public event UnityAction Died;
 
     public void TakeDamage()
     {
         _bloodFX.Play();
-        _animator.SetTrigger(DieAnimation);
 
         if (_isNextStageFighter)
         {
-            _transition.OnTargetDied();
             Died?.Invoke();
         }
 
+        _mover.enabled = false;
         enabled = false;
     }
 
     private void OnEnable()
     {
+        _mover = GetComponent<EnemyMover>();
         _player = FindObjectOfType<Player>();
-        _animator = GetComponent<UnityEngine.Animator>();
-
-        _player.Died += PlayVictoryAnimation;
-    }
-
-    private void Start()
-    {
-        _transition = FindObjectOfType<TargetDieTransition>();
+        _player.Started += Init;
     }
 
     private void OnDisable()
     {
-        _player.Died -= PlayVictoryAnimation;
+        _player.Started -= Init;
     }
 
-    private void PlayVictoryAnimation()
+    private void Init()
     {
-        _animator.SetTrigger(VictoryAnimation);
+        _mover.enabled = true;
     }
 }
