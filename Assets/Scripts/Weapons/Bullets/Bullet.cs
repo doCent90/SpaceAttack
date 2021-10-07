@@ -4,7 +4,7 @@ public abstract class Bullet : MonoBehaviour
 {
     protected Player _player;
 
-    protected const float Speed = 30f;
+    protected const float Speed = 50f;
 
     private void Start()
     {

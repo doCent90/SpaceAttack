@@ -7,7 +7,7 @@ public class ECprojectileActor : MonoBehaviour {
     public Transform spawnLocator; 
     public Transform spawnLocatorMuzzleFlare;
     public Transform shellLocator;
-    public Animator recoilAnimator;
+    public UnityEngine.Animator recoilAnimator;
 
     public Transform[] shotgunLocator;
 

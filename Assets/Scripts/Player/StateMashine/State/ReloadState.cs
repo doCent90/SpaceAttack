@@ -1,9 +1,9 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(UnityEngine.Animator))]
 public class ReloadState : StatePlayer
 {
-    private Animator _animator;
+    private UnityEngine.Animator _animator;
 
     private const string ReloadAnimation = "Reload";
 
@@ -14,6 +14,6 @@ public class ReloadState : StatePlayer
 
     private void Start()
     {
-        _animator = GetComponent<Animator>();
+        _animator = GetComponent<UnityEngine.Animator>();
     }
 }

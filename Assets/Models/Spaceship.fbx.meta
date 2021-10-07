@@ -29,7 +29,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
-    motionNodeName: 
+    motionNodeName: AlienInSpaceShip_Rig
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
@@ -71,8 +71,108 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
+      transformMask:
+      - path: 
+        weight: 1
+      - path: AlienInSpaceShip_Rig
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/IK_Arm.L
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/IK_Arm.L/Finger_01_01.L
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/IK_Arm.L/Finger_01_01.L/Finger_01_02.L
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/IK_Arm.L/Finger_01_01.L/Finger_01_02.L/Finger_01_03.L
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/IK_Arm.L/Finger_02_01.L
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/IK_Arm.L/Finger_02_01.L/Finger_02_02.L
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/IK_Arm.L/Finger_02_01.L/Finger_02_02.L/Finger_02_03.L
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/IK_Arm.L/IK_Finger_01.L
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/IK_Arm.L/IK_Finger_02.L
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/IK_Arm.R
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/IK_Arm.R/Finger_01_01.R
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/IK_Arm.R/Finger_01_01.R/Finger_01_02.R
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/IK_Arm.R/Finger_01_01.R/Finger_01_02.R/Finger_01_03.R
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/IK_Arm.R/Finger_02_01.R
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/IK_Arm.R/Finger_02_01.R/Finger_02_02.R
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/IK_Arm.R/Finger_02_01.R/Finger_02_02.R/Finger_02_03.R
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/IK_Arm.R/IK_Finger_01.R
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/IK_Arm.R/IK_Finger_02.R
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/IK_Leg.L
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/IK_Leg.L/Foot.L
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/IK_Leg.R
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/IK_Leg.R/Foot.R
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/Pelvis
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/Pelvis/Leg_01.L
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/Pelvis/Leg_01.L/Leg_02.L
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/Pelvis/Leg_01.R
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/Pelvis/Leg_01.R/Leg_02.R
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/Pelvis/Spine_01
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/Pelvis/Spine_01/Spine_02
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/Pelvis/Spine_01/Spine_02/Spine_03
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/Pelvis/Spine_01/Spine_02/Spine_03/Arm_01.L
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/Pelvis/Spine_01/Spine_02/Spine_03/Arm_01.L/Arm_02.L
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/Pelvis/Spine_01/Spine_02/Spine_03/Arm_01.R
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/Pelvis/Spine_01/Spine_02/Spine_03/Arm_01.R/Arm_02.R
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/Pelvis/Spine_01/Spine_02/Spine_03/Neck
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/Pelvis/Spine_01/Spine_02/Spine_03/Neck/Head
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/Pole_Arm.L
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/Pole_Arm.R
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/Pole_Leg.L
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Root/Pole_Leg.R
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Stick.L
+        weight: 1
+      - path: AlienInSpaceShip_Rig/SpaceShip_Root/SpaceShip/Stick.R
+        weight: 1
+      - path: Circle
+        weight: 1
+      - path: Circle.001
+        weight: 1
+      - path: Gun
+        weight: 1
+      maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16

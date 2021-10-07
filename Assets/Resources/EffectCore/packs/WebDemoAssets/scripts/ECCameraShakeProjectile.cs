@@ -5,7 +5,7 @@ using UnityEngine;
 public class ECCameraShakeProjectile : MonoBehaviour {
 
     //public bool cameraShakeBool = true;
-    public Animator CamerShakeAnimator;
+    public UnityEngine.Animator CamerShakeAnimator;
 
 	// Use this for initialization
 	void Start () {

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(UnityEngine.Animator))]
 public class EnemyShooter : MonoBehaviour
 {
     [SerializeField] private EnemyBullet _bulletEnemyTamplate;
@@ -9,7 +9,7 @@ public class EnemyShooter : MonoBehaviour
     [SerializeField] private ParticleSystem _shot;
     [SerializeField] private float Delay;
 
-    private Animator _animator;
+    private UnityEngine.Animator _animator;
     private Enemy _enemy;
 
     private bool _hasShooted;
@@ -21,7 +21,7 @@ public class EnemyShooter : MonoBehaviour
 
     private void Start()
     {
-        _animator = GetComponent<Animator>();
+        _animator = GetComponent<UnityEngine.Animator>();
         _enemy = GetComponent<Enemy>();
         _hasShooted = false;
         _elapsedTime = 0;
