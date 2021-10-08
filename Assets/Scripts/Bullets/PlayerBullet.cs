@@ -3,11 +3,12 @@ using UnityEngine;
 public class PlayerBullet : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _particleFire;
+    [SerializeField] private GameObject _bullet;
 
     private float _elapsedTime;
     private bool _hasDestroy;
 
-    private const float LifeTime = 0.5f;
+    private const float LifeTime = 0.35f;
     private const float Speed = 90f;
 
     private void OnEnable()
@@ -20,20 +21,24 @@ public class PlayerBullet : MonoBehaviour
         if (collision.TryGetComponent(out Enemy enemy))
         {
             enemy.TakeDamage();
-            Destroy(gameObject);
+            _hasDestroy = true;
+            _elapsedTime = 0;
+            _bullet.SetActive(false);
         }
 
-        if (collision.TryGetComponent(out Environment environment))
+        if (collision.TryGetComponent(out Environment environment) && !_hasDestroy)
         {
             _particleFire.Play();
             _elapsedTime = 0;
             _hasDestroy = true;
+            _bullet.SetActive(false);
         }
     }
 
     private void Update()
     {
-        transform.Translate(Vector3.forward * Speed * Time.deltaTime);
+        if(!_hasDestroy)
+            transform.Translate(Vector3.forward * Speed * Time.deltaTime);
 
         _elapsedTime += Time.deltaTime;
         if (_elapsedTime > LifeTime && _hasDestroy)
