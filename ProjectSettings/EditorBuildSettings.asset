@@ -11,12 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LVL1.unity
     guid: abfd2f1c7b84f494db7ab389ac59d363
-  - enabled: 0
-    path: Assets/Plugins/TypedScenes/Samples/SampleScene.unity
-    guid: 1e1add331ebd93c4b83553eb8295a3ed
-  - enabled: 0
-    path: Assets/Resources/FX/EffectCore/packs/StylizedProjectilePack1/scenes/stylizedProjectilePack_1.unity
-    guid: b1d8acc30cd38b44d8eaa31ba9da3d58
   - enabled: 1
     path: Assets/Scenes/ColorSet_1.unity
     guid: 803beb248a20b8f458a598339f6403a1
@@ -30,12 +24,6 @@ EditorBuildSettings:
     path: Assets/Scenes/ColorSet_Creative.unity
     guid: dbae7d6ce16a0614baf9d81f88b567d7
   - enabled: 1
-    path: Assets/Resources/FX/StarterParticles/SCENES/ExampleWithClickableButton.unity
-    guid: fc7471c908cd74346aa0d6a8cf155212
-  - enabled: 1
-    path: Assets/Resources/FX/StarterParticles/SCENES/ParticleEffectExamples.unity
-    guid: 4f1f38990d5c24b4aaaba3fa1e642aa4
-  - enabled: 1
-    path: Assets/Resources/FX/SimpleFX/_Demo/Demo.unity
-    guid: dbe9743d9065a2445a22fa67fa9fdbb5
+    path: Assets/Resources/FX/3D Lasers Pack/Demo scene lasers/Demo_lasers.unity
+    guid: d7e2a1a9e69984045906ff3af564e7d9
   m_configObjects: {}

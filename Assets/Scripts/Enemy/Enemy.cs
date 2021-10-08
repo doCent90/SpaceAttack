@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private bool _isNextStageFighter;
 
     private TargetDieTransition _transition;
+    private BackGroundMover _mover;
 
     public event UnityAction Died;
 
@@ -18,6 +19,7 @@ public class Enemy : MonoBehaviour
         if (_isNextStageFighter)
         {
             _transition.OnTargetDied();
+            _mover.enabled = true;
             Died?.Invoke();
         }
 

@@ -3,8 +3,10 @@ using UnityEngine.Events;
 
 public class AttackState : StatePlayer
 {
+    [SerializeField] private GameObject _laserPlace;
+    [SerializeField] private ParticleSystem _laser;
     [SerializeField] private ParticleSystem _shootFX;
-    [SerializeField] private GameObject _laser;
+
     [SerializeField] private Transform _gun;
     [SerializeField] private Transform _gunPlace;
     [SerializeField] private Transform _cirlceGunPlace;
@@ -13,19 +15,13 @@ public class AttackState : StatePlayer
     [Header("Targets")]
     [SerializeField] private Enemy[] _targets;
 
-    private PlayerShooter _playerShooter;
-
-    private float _elapsedTime;
     private bool _hasRightEdgeDone;
     private int _indexTarget = 0;
 
+    [SerializeField] private float RightRange;
+    [SerializeField] private float LeftRange;
 
-    private const float RightRange = 359;
-    private const float LeftRange = 330;
     private const float StartAngle = 15;
-    private const float DelayBetweenShoot = 0.2f;
-    private const float TimeScaleRapid = 0.3f;
-    private const float TimeScaleSpeed = 3f;
 
     public event UnityAction<bool> Attacked;
     public event UnityAction Shoted;
@@ -35,52 +31,33 @@ public class AttackState : StatePlayer
         Attacked?.Invoke(true);
         SetStartAngle();
 
+        _laserPlace.SetActive(false);
         _hasRightEdgeDone = true;
-        _laser.SetActive(true);
     }
 
     private void OnDisable()
     {
         Attacked?.Invoke(false);
-        _laser.SetActive(false);
         ResetAngle();
-    }
-
-    private void Start()
-    {        
-        _playerShooter = GetComponent<PlayerShooter>();
     }
 
     private void Update()
     {
-        if (Time.timeScale != TimeScaleRapid)
-            SlowDownTime();
-        else
+        if (_hasRightEdgeDone)
         {
-            if (_hasRightEdgeDone)
-            {
-                RotateGunLeft();
-            }
-            else if (!_hasRightEdgeDone)
-            {
-                RotateGunRihgt();
-            }
-
-            _elapsedTime += Time.deltaTime;
-
-            if (Input.GetMouseButtonDown(0) && _elapsedTime >= DelayBetweenShoot)
-            {
-                Attack();
-                _elapsedTime = 0;
-            }
+            RotateGunLeft();
         }
-    }
+        else if (!_hasRightEdgeDone)
+        {
+            RotateGunRihgt();
+        }
 
-    private void SlowDownTime()
-    {
-        float time = Time.timeScale;
-        time = Mathf.MoveTowards(time, TimeScaleRapid, TimeScaleSpeed * Time.deltaTime);
-        Time.timeScale = time;
+        if (Input.GetMouseButton(0))
+        {
+            Attack(true);
+        }
+        else
+            Attack(false);
     }
 
     private void SetStartAngle()
@@ -96,7 +73,7 @@ public class AttackState : StatePlayer
 
     private void ResetAngle()
     {
-        _cirlceGunPlace.localEulerAngles = new Vector3(0, 0, 0);
+        _cirlceGunPlace.localEulerAngles = new Vector3(0, 45, 0);
     }
 
     private void RotateGunLeft()
@@ -115,10 +92,19 @@ public class AttackState : StatePlayer
             _hasRightEdgeDone = true;
     }
 
-    private void Attack()
+    private void Attack(bool isShooting)
     {
-        Shoted?.Invoke();
-        _playerShooter.Shoot();
-        _shootFX.Play();
+        if (isShooting)
+        {
+            Shoted?.Invoke();
+            _shootFX.Play();
+            _laserPlace.SetActive(true);
+            _laser.Play();
+        }
+        else
+        {
+            _laserPlace.SetActive(false);
+            _laser.Stop();
+        }
     }
 }

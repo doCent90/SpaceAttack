@@ -6,7 +6,8 @@ public class ParticalCollisions : MonoBehaviour
     {
         if (collision.TryGetComponent(out Enemy enemy))
         {
-
+            enemy.TakeDamage();
+            Debug.Log("Damage");
         }
     }
 }
