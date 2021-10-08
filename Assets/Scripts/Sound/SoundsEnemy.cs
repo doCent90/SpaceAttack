@@ -5,11 +5,11 @@ public class SoundsEnemy : SoundsPlaying
     private void Start()
     {
         _enemy = GetComponentInParent<Enemy>();
-        _enemy.Died += PlayDeath;
+        _enemy.Died += Death;
     }
 
     private void OnDisable()
     {
-        _enemy.Died -= PlayDeath;
+        _enemy.Died -= Death;
     }
 }

@@ -17,7 +17,16 @@ ModelImporter:
     second: AlienInSpaceShip_Rig|Move
   - first:
       74: 2212212305085355581
-    second: AlienInSpaceShip_Rig|Move (1)
+    second: AlienInSpaceShip_Rig|Damage
+  - first:
+      74: 1433736484332986498
+    second: AlienInSpaceShip_Rig|Damage
+  - first:
+      74: 1890769632791303923
+    second: AlienInSpaceShip_Rig|Attack
+  - first:
+      74: 1890769632791303923
+    second: AlienInSpaceShip_Rig|Idle Move
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -47,8 +56,8 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: AlienInSpaceShip_Rig|Move (1)
-      takeName: AlienInSpaceShip_Rig|Move
+      name: AlienInSpaceShip_Rig|Damage
+      takeName: AlienInSpaceShip_Rig|Damage
       internalID: 0
       firstFrame: 0
       lastFrame: 20
@@ -176,11 +185,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: AlienInSpaceShip_Rig|Damage
-      takeName: AlienInSpaceShip_Rig|Damage
+      name: AlienInSpaceShip_Rig|Attack
+      takeName: AlienInSpaceShip_Rig|Attack
       internalID: 0
       firstFrame: 0
-      lastFrame: 20
+      lastFrame: 50
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -216,7 +225,36 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: AlienInSpaceShip_Rig|Idle Move
+      takeName: AlienInSpaceShip_Rig|Idle
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 160
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -237,7 +275,7 @@ ModelImporter:
       name: AlienInSpaceShip_Rig|Move
       takeName: AlienInSpaceShip_Rig|Move
       internalID: 0
-      firstFrame: 0
+      firstFrame: 14
       lastFrame: 20
       wrapMode: 0
       orientationOffsetY: 0
@@ -256,7 +294,41 @@ ModelImporter:
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
+      curves:
+      - name: Curve
+        curve:
+          serializedVersion: 2
+          curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 6.5500793
+            value: 1.0363892
+            inSlope: 0.000048155525
+            outSlope: 0.000048155525
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 15.601175
+            value: 0.00050616264
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          preInfinity: 2
+          postInfinity: 2
+          rotationOrder: 4
       events: []
       transformMask: []
       maskType: 3

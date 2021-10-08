@@ -33,7 +33,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Color_Texture:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: d4e498432c926de4e8a7fc3c9ba3cf6a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Mask_R_Emission:
@@ -100,7 +100,7 @@ Material:
     m_Floats:
     - Brightness_Rim: 5
     - Curve_Depth: 0.03
-    - Depth_Divider: 0.25
+    - Depth_Divider: 0.3
     - Rim_Power: 10
     - Tiling: 1
     - Toon_Ramp_Offset: 0.55
@@ -132,6 +132,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Rim_Color: {r: 1, g: 1, b: 1, a: 1}
     - Toon_Ramp_Tinting: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.7924528, g: 0.056825757, b: 0, a: 1}

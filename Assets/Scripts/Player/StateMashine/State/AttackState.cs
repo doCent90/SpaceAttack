@@ -5,7 +5,7 @@ public class AttackState : StatePlayer
 {
     [SerializeField] private ParticleSystem _shootFX;
     [SerializeField] private GameObject _laser;
-    [SerializeField] private ParticalCollisions _particalCollisions;
+    [SerializeField] private Transform _gun;
     [SerializeField] private Transform _gunPlace;
     [SerializeField] private Transform _cirlceGunPlace;
     [Header("Settings of Shoot Position")]
@@ -19,14 +19,13 @@ public class AttackState : StatePlayer
     private bool _hasRightEdgeDone;
     private int _indexTarget = 0;
 
-    [SerializeField] private float RightRange = 350;
-    [SerializeField] private float LeftRange = 310;
 
+    private const float RightRange = 359;
+    private const float LeftRange = 330;
+    private const float StartAngle = 15;
     private const float DelayBetweenShoot = 0.2f;
-    private const float TimeScaleNormal = 1f;
-    private const float TimeScaleRapid = 0.4f;
-    private const float _startAngle = 20f;
-    private const float _gunDownAngle = 10f;
+    private const float TimeScaleRapid = 0.3f;
+    private const float TimeScaleSpeed = 3f;
 
     public event UnityAction<bool> Attacked;
     public event UnityAction Shoted;
@@ -36,19 +35,15 @@ public class AttackState : StatePlayer
         Attacked?.Invoke(true);
         SetStartAngle();
 
-        Time.timeScale = TimeScaleRapid;
         _hasRightEdgeDone = true;
-
         _laser.SetActive(true);
-        _particalCollisions.enabled = true;
     }
 
     private void OnDisable()
     {
         Attacked?.Invoke(false);
-
-        Time.timeScale = TimeScaleNormal;
         _laser.SetActive(false);
+        ResetAngle();
     }
 
     private void Start()
@@ -58,30 +53,50 @@ public class AttackState : StatePlayer
 
     private void Update()
     {
-        if (_hasRightEdgeDone)
+        if (Time.timeScale != TimeScaleRapid)
+            SlowDownTime();
+        else
         {
-            RotateGunLeft();
-        }
-        else if (!_hasRightEdgeDone)
-        {
-            RotateGunRihgt();
-        }
+            if (_hasRightEdgeDone)
+            {
+                RotateGunLeft();
+            }
+            else if (!_hasRightEdgeDone)
+            {
+                RotateGunRihgt();
+            }
 
-        _elapsedTime += Time.deltaTime;
+            _elapsedTime += Time.deltaTime;
 
-        if (Input.GetMouseButtonDown(0) && _elapsedTime >= DelayBetweenShoot)
-        {
-            Attack();
-            _elapsedTime = 0;
+            if (Input.GetMouseButtonDown(0) && _elapsedTime >= DelayBetweenShoot)
+            {
+                Attack();
+                _elapsedTime = 0;
+            }
         }
+    }
+
+    private void SlowDownTime()
+    {
+        float time = Time.timeScale;
+        time = Mathf.MoveTowards(time, TimeScaleRapid, TimeScaleSpeed * Time.deltaTime);
+        Time.timeScale = time;
     }
 
     private void SetStartAngle()
     {
-        _cirlceGunPlace.LookAt(_targets[_indexTarget].transform);
-        _cirlceGunPlace.localEulerAngles += new Vector3(0, _startAngle, 0);
-        _cirlceGunPlace.localEulerAngles = new Vector3(0, _cirlceGunPlace.localEulerAngles.y, 0);
+        Transform positions = _cirlceGunPlace;
+        positions.LookAt(_targets[_indexTarget].transform);
+
+        _cirlceGunPlace.localEulerAngles = new Vector3(0, positions.localEulerAngles.y, 0);
+        _cirlceGunPlace.localEulerAngles += new Vector3(0, StartAngle, 0);
+
         _indexTarget++;
+    }
+
+    private void ResetAngle()
+    {
+        _cirlceGunPlace.localEulerAngles = new Vector3(0, 0, 0);
     }
 
     private void RotateGunLeft()

@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Spaceship Glass
-  m_Shader: {fileID: -6465566751694194690, guid: 99b2c9be6641c4245ac2452c7e50b9df, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: e85bc0ca38713b04991b275971804a8f, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -132,6 +132,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Rim_Color: {r: 1, g: 1, b: 1, a: 1}
     - Toon_Ramp_Tinting: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.19215687, g: 0.24980393, b: 0.2627451, a: 0.8509804}

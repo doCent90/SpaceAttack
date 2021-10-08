@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FinishPoint : MonoBehaviour
 {
+    [SerializeField] private Text _winText;
+
     private PlayerMover _playerMover;
     private CameraMover _cameraMover;
     private Finish _celebration;
@@ -24,5 +27,6 @@ public class FinishPoint : MonoBehaviour
     {
         _cameraMover.enabled = false;
         _celebration.enabled = true;
+        _winText.enabled = true;
     }
 }
