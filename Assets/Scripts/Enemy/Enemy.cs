@@ -1,26 +1,30 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(EnemyMover))]
+[RequireComponent(typeof(EnemyAnimator))]
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _bloodFX;
     [SerializeField] private bool _isNextStageFighter;
+    [SerializeField] private Material _dieMaterial;
+    [SerializeField] private SkinnedMeshRenderer _renderer;
 
     private TargetDieTransition _transition;
-    private BackGroundMover _mover;
+    private EnemyMover _mover;
 
     public event UnityAction Died;
 
     public void TakeDamage()
     {
         _bloodFX.Play();
+        _mover.enabled = true;
+        Died?.Invoke();
+        _renderer.material = _dieMaterial;
 
         if (_isNextStageFighter)
         {
             _transition.OnTargetDied();
-            _mover.enabled = true;
-            Died?.Invoke();
         }
 
         enabled = false;
@@ -29,5 +33,6 @@ public class Enemy : MonoBehaviour
     private void OnEnable()
     {
         _transition = FindObjectOfType<TargetDieTransition>();
+        _mover = GetComponent<EnemyMover>();
     }
 }

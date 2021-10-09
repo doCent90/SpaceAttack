@@ -23,7 +23,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ColorSet_Creative.unity
     guid: dbae7d6ce16a0614baf9d81f88b567d7
-  - enabled: 1
-    path: Assets/Resources/FX/3D Lasers Pack/Demo scene lasers/Demo_lasers.unity
-    guid: d7e2a1a9e69984045906ff3af564e7d9
   m_configObjects: {}

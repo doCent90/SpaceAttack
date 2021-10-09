@@ -55,7 +55,7 @@ public class PlayerMover : MonoBehaviour
         {
             Moved?.Invoke(true);
             var tweenMove = _rigidbodySpceShip.DOMove(_points[_currentPointIndex].position, _moveDuration);
-            tweenMove.SetEase(Ease.InOutBack);
+            tweenMove.SetEase(Ease.InBack);
             tweenMove.OnComplete(ChangeCurrentIndexPosition);
         }
     }

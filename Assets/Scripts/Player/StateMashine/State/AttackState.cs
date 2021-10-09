@@ -3,8 +3,8 @@ using UnityEngine.Events;
 
 public class AttackState : StatePlayer
 {
-    [SerializeField] private GameObject _laserPlace;
-    [SerializeField] private ParticleSystem _laser;
+    [SerializeField] private GameObject _laser;
+    [SerializeField] private GameObject _aim;
     [SerializeField] private ParticleSystem _shootFX;
 
     [SerializeField] private Transform _gun;
@@ -16,29 +16,33 @@ public class AttackState : StatePlayer
     [SerializeField] private Enemy[] _targets;
 
     private bool _hasRightEdgeDone;
-    private int _indexTarget = 0;
+    private int _indexTarget = 1;
 
-    [SerializeField] private float RightRange;
-    [SerializeField] private float LeftRange;
+    private const float RightRange = 210f;
+    private const float LeftRange = 145f;
+    private const float StartPositionCirlceGunPlace = 180f;
 
-    private const float StartAngle = 15;
-
-    public event UnityAction<bool> Attacked;
+    public event UnityAction<bool> ReadyToAttacked;
+    public event UnityAction<bool> Fired;
     public event UnityAction Shoted;
 
     private void OnEnable()
     {
-        Attacked?.Invoke(true);
+        ReadyToAttacked?.Invoke(true);
         SetStartAngle();
 
-        _laserPlace.SetActive(false);
+        _laser.SetActive(false);
         _hasRightEdgeDone = true;
+        _aim.SetActive(true);
     }
 
     private void OnDisable()
     {
-        Attacked?.Invoke(false);
-        ResetAngle();
+        ReadyToAttacked?.Invoke(false);
+        Fired?.Invoke(false);
+
+        _laser.SetActive(false);
+        _aim.SetActive(false);
     }
 
     private void Update()
@@ -53,27 +57,26 @@ public class AttackState : StatePlayer
         }
 
         if (Input.GetMouseButton(0))
-        {
             Attack(true);
-        }
         else
             Attack(false);
     }
 
     private void SetStartAngle()
     {
-        Transform positions = _cirlceGunPlace;
-        positions.LookAt(_targets[_indexTarget].transform);
+        _cirlceGunPlace.localEulerAngles = new Vector3(0, StartPositionCirlceGunPlace, 0);
 
-        _cirlceGunPlace.localEulerAngles = new Vector3(0, positions.localEulerAngles.y, 0);
-        _cirlceGunPlace.localEulerAngles += new Vector3(0, StartAngle, 0);
+        if(_indexTarget % 2 == 0)
+            _gunPlace.localEulerAngles = new Vector3(0, LeftRange, 0);
+        else
+            _gunPlace.localEulerAngles = new Vector3(0, RightRange, 0);
 
         _indexTarget++;
     }
 
     private void ResetAngle()
     {
-        _cirlceGunPlace.localEulerAngles = new Vector3(0, 45, 0);
+        _gunPlace.localEulerAngles = new Vector3(0, 0, 0);
     }
 
     private void RotateGunLeft()
@@ -94,17 +97,17 @@ public class AttackState : StatePlayer
 
     private void Attack(bool isShooting)
     {
+        Fired?.Invoke(isShooting);
+
         if (isShooting)
         {
             Shoted?.Invoke();
             _shootFX.Play();
-            _laserPlace.SetActive(true);
-            _laser.Play();
+            _laser.SetActive(true);
         }
         else
         {
-            _laserPlace.SetActive(false);
-            _laser.Stop();
+            _laser.SetActive(false);
         }
     }
 }

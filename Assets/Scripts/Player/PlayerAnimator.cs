@@ -20,7 +20,7 @@ public class PlayerAnimator : MonoBehaviour
 
         _mover.Moved += Move;
         _attack.Shoted += Shot;
-        _attack.Attacked += LockTarget;
+        _attack.ReadyToAttacked += LockTarget;
     }
 
     private void Move(bool isMoving)

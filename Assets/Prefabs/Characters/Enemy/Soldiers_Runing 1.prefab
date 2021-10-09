@@ -1832,10 +1832,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.3719285
-  m_Height: 1.7437576
+  m_Radius: 0.2220207
+  m_Height: 1.9926172
   m_Direction: 1
-  m_Center: {x: -0.001014471, y: 0.7780803, z: 0}
+  m_Center: {x: -0.001014471, y: 0.7294299, z: 0}
 --- !u!114 &1228147996592164860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1862,6 +1862,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bloodFX: {fileID: 7361771319672356789}
   _isNextStageFighter: 1
+  _dieMaterial: {fileID: 2100000, guid: c8eb020621a62b941bd37ce4a7ae4914, type: 2}
+  _renderer: {fileID: 3835949438086934898}
 --- !u!114 &2733481612470500236
 MonoBehaviour:
   m_ObjectHideFlags: 0
