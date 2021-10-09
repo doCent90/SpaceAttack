@@ -1,38 +1,73 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(LineRenderer))]
-public class EGA_Laser : MonoBehaviour
+public class Laser : MonoBehaviour
 {
     [SerializeField] private GameObject _hitEffect;
-    [SerializeField] private float _hitOffset = 0;
-    [SerializeField] private float _maxLength;
-    [SerializeField] private float _mainTextureLength = 1f;
-    [SerializeField] private float _noiseTextureLength = 1f;
+
+    private bool _isReady = false;
 
     private Vector4 _length = new Vector4(1,1,1,1);
-    private bool _isLaserSaver = false;
-    private bool _hasUpdateSaver = false;
     private LineRenderer _laser;
-
+    private AttackState _attack;
     private ParticleSystem[] _effects;
     private ParticleSystem[] _hits;
+
+    private const float _hitOffset = 0.1f;
+    private const float _noiseTextureLength = 0.5f;
+    private const float _mainTextureLength = 0.3f;
+    private const float _maxLength = 25f;
 
     private const string MainTexture = "_MainTex";
     private const string Noise = "_Noise";
 
-    private void Start ()
+    private void OnEnable()
     {
         _laser = GetComponent<LineRenderer>();
         _effects = GetComponentsInChildren<ParticleSystem>();
         _hits = _hitEffect.GetComponentsInChildren<ParticleSystem>();
+        _attack = GetComponentInParent<AttackState>();
+
+        _attack.Fired += ActivatLaser;
+
+        ResetLaser();
+    }
+
+    private void OnDisable()
+    {
+        _attack.Fired -= ActivatLaser;
     }
 
     private void Update()
     {
-        _laser.material.SetTextureScale(MainTexture, new Vector2(_length[0], _length[1]));                    
-        _laser.material.SetTextureScale(Noise, new Vector2(_length[2], _length[3]));
+        InitMaterial();
+        StartLaser();
+    }
 
-        if (_laser != null && _hasUpdateSaver == false)
+    private void ActivatLaser(bool isAttack)
+    {
+        _isReady = isAttack;
+    }
+
+    private void ResetLaser()
+    {
+        if (_laser != null)
+        {
+            _laser.enabled = false;
+        }
+
+        if (_effects != null)
+        {
+            foreach (var allPs in _effects)
+            {
+                if (allPs.isPlaying) allPs.Stop();
+            }
+        }
+    }
+
+    private void StartLaser()
+    {
+        if (_laser != null && _isReady == true)
         {
             _laser.SetPosition(0, transform.position);
             RaycastHit hit;
@@ -43,9 +78,10 @@ public class EGA_Laser : MonoBehaviour
                 _hitEffect.transform.position = hit.point + hit.normal * _hitOffset;
                 _hitEffect.transform.rotation = Quaternion.identity;
 
-                foreach (var allPs in _effects)
+                foreach (var partical in _effects)
                 {
-                    if (!allPs.isPlaying) allPs.Play();
+                    if (!partical.isPlaying)
+                        partical.Play();
                 }
 
                 _length[0] = _mainTextureLength * (Vector3.Distance(transform.position, hit.point));
@@ -57,37 +93,30 @@ public class EGA_Laser : MonoBehaviour
                 _laser.SetPosition(1, endPos);
                 _hitEffect.transform.position = endPos;
 
-                foreach (var allPs in _hits)
+                foreach (var partical in _hits)
                 {
-                    if (allPs.isPlaying) allPs.Stop();
+                    if (partical.isPlaying)
+                        partical.Stop();
                 }
 
                 _length[0] = _mainTextureLength * (Vector3.Distance(transform.position, endPos));
                 _length[2] = _noiseTextureLength * (Vector3.Distance(transform.position, endPos));
             }
 
-            if (_laser.enabled == false && _isLaserSaver == false)
+            if (_laser.enabled == false && _isReady == true)
             {
-                _isLaserSaver = true;
                 _laser.enabled = true;
             }
-        }  
-    }
-
-    public void DisablePrepare()
-    {
-        if (_laser != null)
+        }
+        else
         {
             _laser.enabled = false;
         }
-        _hasUpdateSaver = true;
+    }
 
-        if (_effects != null)
-        {
-            foreach (var allPs in _effects)
-            {
-                if (allPs.isPlaying) allPs.Stop();
-            }
-        }
+    private void InitMaterial()
+    {
+        _laser.material.SetTextureScale(MainTexture, new Vector2(_length[0], _length[1]));
+        _laser.material.SetTextureScale(Noise, new Vector2(_length[2], _length[3]));
     }
 }

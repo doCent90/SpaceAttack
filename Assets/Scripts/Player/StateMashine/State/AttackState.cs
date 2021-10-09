@@ -12,9 +12,9 @@ public class AttackState : StatePlayer
     [SerializeField] private Transform _cirlceGunPlace;
     [Header("Settings of Shoot Position")]
     [SerializeField] private float _speedRotate;
-    [Header("Targets")]
-    [SerializeField] private Enemy[] _targets;
 
+    private OverHeatBar _overHeat;
+    private bool _isOverHeated = false;
     private bool _hasRightEdgeDone;
     private int _indexTarget = 1;
 
@@ -28,6 +28,9 @@ public class AttackState : StatePlayer
 
     private void OnEnable()
     {
+        _overHeat = FindObjectOfType<OverHeatBar>();
+        _overHeat.OverHeated += ResetAttake;
+
         ReadyToAttacked?.Invoke(true);
         SetStartAngle();
 
@@ -38,6 +41,8 @@ public class AttackState : StatePlayer
 
     private void OnDisable()
     {
+        _overHeat.OverHeated -= ResetAttake;
+
         ReadyToAttacked?.Invoke(false);
         Fired?.Invoke(false);
 
@@ -56,7 +61,7 @@ public class AttackState : StatePlayer
             RotateGunRihgt();
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !_isOverHeated)
             Attack(true);
         else
             Attack(false);
@@ -109,5 +114,10 @@ public class AttackState : StatePlayer
         {
             _laser.SetActive(false);
         }
+    }
+
+    private void ResetAttake(bool isOverHeated)
+    {
+        _isOverHeated = isOverHeated;
     }
 }

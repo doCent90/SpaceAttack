@@ -9735,7 +9735,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4008433718906754}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &198403458890646748
 ParticleSystem:
@@ -9820,7 +9820,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.95
+      scalar: 0.2
       minScalar: 0.3
       maxCurve:
         serializedVersion: 2
@@ -9989,7 +9989,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2.9
+      scalar: 0.95
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -19391,8 +19391,8 @@ Transform:
   - {fileID: 4658040899249296}
   - {fileID: 4491789899778702}
   - {fileID: 4545792229942938}
-  - {fileID: 4344651066380678}
   - {fileID: 4129054992164016}
+  - {fileID: 4344651066380678}
   m_Father: {fileID: 4995623587091000}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -33941,10 +33941,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hitEffect: {fileID: 1140256074895502}
-  _hitOffset: 0.1
-  _maxLength: 25
-  _mainTextureLength: 0.3
-  _noiseTextureLength: 0.5
 --- !u!120 &120645954716574990
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -33991,7 +33987,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.44728377
+    widthMultiplier: 0.82149655
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -38919,7 +38915,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4008433718906754}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &198206314452944060
 ParticleSystem:
@@ -39004,7 +39000,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
