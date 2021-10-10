@@ -3,14 +3,14 @@ using UnityEngine.Events;
 
 public class AttackState : StatePlayer
 {
+    [Header("Laser")]
     [SerializeField] private GameObject _laser;
     [SerializeField] private GameObject _aim;
     [SerializeField] private ParticleSystem _shootFX;
-
-    [SerializeField] private Transform _gun;
+    [Header("Gun Place")]
     [SerializeField] private Transform _gunPlace;
     [SerializeField] private Transform _cirlceGunPlace;
-    [Header("Settings of Shoot Position")]
+    [Header("Settings of Shot")]
     [SerializeField] private float _speedRotate;
 
     private OverHeatBar _overHeat;
@@ -77,11 +77,6 @@ public class AttackState : StatePlayer
             _gunPlace.localEulerAngles = new Vector3(0, RightRange, 0);
 
         _indexTarget++;
-    }
-
-    private void ResetAngle()
-    {
-        _gunPlace.localEulerAngles = new Vector3(0, 0, 0);
     }
 
     private void RotateGunLeft()

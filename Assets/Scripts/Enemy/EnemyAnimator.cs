@@ -4,13 +4,18 @@ using UnityEngine;
 public class EnemyAnimator : MonoBehaviour
 {
     private Animator _animator;
-    private GameOverField _gameOverField;
     private Enemy _enemy;
     private Player _player;
 
     private const string Run = "Run";
     private const string Die = "Die";
     private const string Victory = "Victory";
+
+    public void Celebrate()
+    {
+        _animator.SetBool(Run, false);
+        _animator.SetTrigger(Victory);
+    }
 
     private void OnEnable()
     {
@@ -39,17 +44,17 @@ public class EnemyAnimator : MonoBehaviour
         _animator.SetTrigger(Die);
     }
 
-    private void Celebrate()
-    {
-        _animator.SetTrigger(Victory);
-    }
-
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.TryGetComponent(out GameOverField gameOverField))
         {
-            _animator.SetBool(Run, false);
-            Celebrate();
+            EnemyAnimator[] enemies = FindObjectsOfType<EnemyAnimator>();
+
+            foreach (var enemy in enemies)
+            {
+                if(enemy.GetComponent<Enemy>().enabled)
+                    enemy.Celebrate();
+            }
         }
     }
 }

@@ -1861,7 +1861,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bloodFX: {fileID: 7361771319672356789}
-  _isNextStageFighter: 1
   _dieMaterial: {fileID: 2100000, guid: c8eb020621a62b941bd37ce4a7ae4914, type: 2}
   _renderer: {fileID: 3835949438086934898}
 --- !u!114 &2733481612470500236

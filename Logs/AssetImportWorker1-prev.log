@@ -1,0 +1,1359 @@
+Using pre-set license
+Built from '2021.1/staging' branch; Version is '2021.1.7f1 (d91830b65d9b) revision 14227504'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19043.1237; Version 2009; 64bit' Language: 'ru' Physical Memory: 16332 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+G:\1\2021.1.7f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+D:/Git/Space-Attack
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+57245
+Successfully changed project path to: D:/Git/Space-Attack
+D:/Git/Space-Attack
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 123.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.1.7f1 (d91830b65d9b)
+[Subsystems] Discovering subsystems at path G:/1/2021.1.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Git/Space-Attack/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Radeon RX 570 Series (ID=0x67df)
+    Vendor:   ATI
+    VRAM:     8171 MB
+    Driver:   27.20.12029.1000
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'G:/1/2021.1.7f1/Editor/Data/Managed'
+Mono path[1] = 'G:/1/2021.1.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'G:/1/2021.1.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56816
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: G:/1/2021.1.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003081 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 127.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.171 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.005014 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 129.16 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.343 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.83 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4117 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.7 MB.
+System memory in use after: 164.9 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 4583.
+Total: 3.032700 ms (FindLiveObjects: 0.527900 ms CreateObjectMapping: 0.230100 ms MarkObjects: 2.203000 ms  DeleteObjects: 0.070500 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Prefabs/ParticalFX/Laser/Trail.prefab
+  artifactKey: Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Trail.prefab using Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '840e861ced52a79ebb044e3e494b78b3') in 0.056244 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.227123 seconds.
+  path: Assets/Prefabs/ParticalFX/Laser/Trail.prefab
+  artifactKey: Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Trail.prefab using Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58cd720ccbbc428361ba01a2a2824036') in 0.005084 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 36.584214 seconds.
+  path: Assets/Prefabs/ParticalFX/Laser/Trail.prefab
+  artifactKey: Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Trail.prefab using Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1065fbdc0bcabc0d59f9b28cb6632353') in 0.005335 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.407644 seconds.
+  path: Assets/Prefabs/ParticalFX/Laser/Trail.prefab
+  artifactKey: Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Trail.prefab using Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23887d442b849e3e6fd0f229e7156cfe') in 0.005499 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.948295 seconds.
+  path: Assets/Prefabs/ParticalFX/Laser/Trail.prefab
+  artifactKey: Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Trail.prefab using Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca3b28a137bb917e6621cb6d74751f29') in 0.005709 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.086871 seconds.
+  path: Assets/Prefabs/ParticalFX/Laser/Trail.prefab
+  artifactKey: Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Trail.prefab using Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8eb7d01ad5443ead6b023f99ce4d5905') in 0.005832 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.561967 seconds.
+  path: Assets/Prefabs/ParticalFX/Laser/Trail.prefab
+  artifactKey: Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Trail.prefab using Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9ba033f503901131dcc203e7cf54208') in 0.006685 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.506601 seconds.
+  path: Assets/Prefabs/ParticalFX/Laser/Trail.prefab
+  artifactKey: Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Trail.prefab using Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88dd3277b088c611cc725415740d4181') in 0.005908 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.640210 seconds.
+  path: Assets/Prefabs/ParticalFX/Laser/Trail.prefab
+  artifactKey: Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Trail.prefab using Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77990d92a1bcdfda9dadb864b8d02730') in 0.005462 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.760609 seconds.
+  path: Assets/Prefabs/ParticalFX/Laser/Trail.prefab
+  artifactKey: Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Trail.prefab using Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5184cd07874715bfe816bd39d88371a') in 0.005810 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.061082 seconds.
+  path: Assets/Prefabs/ParticalFX/Laser/Trail.prefab
+  artifactKey: Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Trail.prefab using Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e64c93f7f2bca6374ee6edd3c5c171c') in 0.005283 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.034368 seconds.
+  path: Assets/Prefabs/ParticalFX/Laser/Trail.prefab
+  artifactKey: Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Trail.prefab using Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '667051d748d915bfc196e81c5e05d6c1') in 0.005242 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.986084 seconds.
+  path: Assets/Prefabs/ParticalFX/Laser/Trail.prefab
+  artifactKey: Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Trail.prefab using Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a46f4292b9b29e382be8b23c8cb6059') in 0.005996 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.189324 seconds.
+  path: Assets/Prefabs/ParticalFX/Laser/Trail.prefab
+  artifactKey: Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Trail.prefab using Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36ef568a1c19043ec2d9e2d59cd08b04') in 0.005396 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004841 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.87 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.156 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.96 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4006 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.1 MB.
+System memory in use after: 155.3 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4585.
+Total: 2.569500 ms (FindLiveObjects: 0.323400 ms CreateObjectMapping: 0.104600 ms MarkObjects: 2.120000 ms  DeleteObjects: 0.020100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 84.788334 seconds.
+  path: Assets/Prefabs/ParticalFX/Laser/Trail.prefab
+  artifactKey: Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Trail.prefab using Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b5b5e2d04ec93b02fa90ce81bb17f38') in 0.034375 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.757515 seconds.
+  path: Assets/Prefabs/ParticalFX/Laser/Trail.prefab
+  artifactKey: Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Trail.prefab using Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3eaebe29f8a32638d6f0c5920fbda917') in 0.006527 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.486372 seconds.
+  path: Assets/Prefabs/ParticalFX/Laser/Trail.prefab
+  artifactKey: Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Trail.prefab using Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2243a7ff2b0c8005240d3d3869aa8219') in 0.005355 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 36.470168 seconds.
+  path: Assets/Prefabs/ParticalFX/Laser/Laser beam 3.prefab
+  artifactKey: Guid(280b8b1393d77f148a8cbcfc7f36e116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Laser beam 3.prefab using Guid(280b8b1393d77f148a8cbcfc7f36e116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '925b44089841463c2eefda9c412a4cd4') in 0.008127 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.120293 seconds.
+  path: Assets/Prefabs/ParticalFX/Laser/Laser beam 3.prefab
+  artifactKey: Guid(280b8b1393d77f148a8cbcfc7f36e116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Laser beam 3.prefab using Guid(280b8b1393d77f148a8cbcfc7f36e116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4b23094e103e6d972ea89134e8dbde2') in 0.006829 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.012672 seconds.
+  path: Assets/Prefabs/ParticalFX/Laser/Laser beam 3.prefab
+  artifactKey: Guid(280b8b1393d77f148a8cbcfc7f36e116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Laser beam 3.prefab using Guid(280b8b1393d77f148a8cbcfc7f36e116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6219275bf24416b1deff4e4755f78272') in 0.007509 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004661 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.95 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.184 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.06 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4006 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.2 MB.
+System memory in use after: 155.4 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4587.
+Total: 2.959100 ms (FindLiveObjects: 0.443000 ms CreateObjectMapping: 0.217400 ms MarkObjects: 2.280100 ms  DeleteObjects: 0.017100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 98.232406 seconds.
+  path: Assets/Prefabs/ParticalFX/Laser/Trail.prefab
+  artifactKey: Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Trail.prefab using Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee2c5a13a77f3452e936b33bc8538273') in 0.032171 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.022861 seconds.
+  path: Assets/Prefabs/ParticalFX/Laser/Trail.prefab
+  artifactKey: Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Trail.prefab using Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '564cc6f33850e4b28e5a97eea79d8aa0') in 0.005577 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.474926 seconds.
+  path: Assets/Prefabs/ParticalFX/Laser/Trail.prefab
+  artifactKey: Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ParticalFX/Laser/Trail.prefab using Guid(b658ee7c370986b4ea51813f2e5ae2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0f3d1466d60b5e391ef59dfd4ad45a0') in 0.005910 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005136 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.79 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.194 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.20 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4006 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 155.2 MB.
+System memory in use after: 155.5 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4589.
+Total: 2.571800 ms (FindLiveObjects: 0.320300 ms CreateObjectMapping: 0.103100 ms MarkObjects: 2.130500 ms  DeleteObjects: 0.016300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 325.167998 seconds.
+  path: Assets/Prefabs/UI/UI.prefab
+  artifactKey: Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/UI.prefab using Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cbec94afbfde743c97195caac8186df') in 0.072370 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.779421 seconds.
+  path: Assets/Prefabs/UI/HotBar.prefab
+  artifactKey: Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/HotBar.prefab using Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7acdb4c2681e205480cb239e2f51130c') in 0.004910 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.167001 seconds.
+  path: Assets/Prefabs/UI/UI.prefab
+  artifactKey: Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/UI.prefab using Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ede7789a2bfa08398e431581ac2fe6af') in 0.010713 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 29.440710 seconds.
+  path: Assets/Prefabs/UI/HotBar.prefab
+  artifactKey: Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/HotBar.prefab using Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e196bba9837311f57a0aaae53ba65210') in 0.004866 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/Prefabs/UI/UI.prefab
+  artifactKey: Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/UI.prefab using Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd7c3b1dd2f1a6d1ec1eabfd71b38e53') in 0.011082 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.654314 seconds.
+  path: Assets/Prefabs/UI/HotBar.prefab
+  artifactKey: Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/HotBar.prefab using Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd515064195c8b8e9ac284f0f3a116e56') in 0.005476 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000286 seconds.
+  path: Assets/Prefabs/UI/UI.prefab
+  artifactKey: Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/UI.prefab using Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9001d1c4c661edd546466229a7f79cff') in 0.010271 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 31.538939 seconds.
+  path: Assets/Prefabs/UI/HotBar.prefab
+  artifactKey: Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/HotBar.prefab using Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83ea5066cc0790ea47f57d89174bf964') in 0.005025 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000281 seconds.
+  path: Assets/Prefabs/UI/UI.prefab
+  artifactKey: Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/UI.prefab using Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b6e78296e93a123d93d2e9aa8d37a07') in 0.011790 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.402027 seconds.
+  path: Assets/Prefabs/UI/HotBar.prefab
+  artifactKey: Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/HotBar.prefab using Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b4bb8beddabcb73426049a64289d43d') in 0.004789 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000285 seconds.
+  path: Assets/Prefabs/UI/UI.prefab
+  artifactKey: Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/UI.prefab using Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3707fe36d1821cc039237932306a9465') in 0.009779 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.088462 seconds.
+  path: Assets/Prefabs/UI/HotBar.prefab
+  artifactKey: Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/HotBar.prefab using Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b78e53a3a7264a2ede701fb0fdcc6768') in 0.004857 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/Prefabs/UI/UI.prefab
+  artifactKey: Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/UI.prefab using Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '951e9f1dafb36f6ede6178db787fd0db') in 0.010804 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.605344 seconds.
+  path: Assets/Prefabs/UI/HotBar.prefab
+  artifactKey: Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/HotBar.prefab using Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '085a0ced3717e5cb83504308da9bbe38') in 0.004698 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/Prefabs/UI/UI.prefab
+  artifactKey: Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/UI.prefab using Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cf1c2e4900f83625ea174393c120a6e') in 0.011182 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.044346 seconds.
+  path: Assets/Prefabs/UI/HotBar.prefab
+  artifactKey: Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/HotBar.prefab using Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1562566b720ff7dbbb819ec13945f8ea') in 0.004969 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000370 seconds.
+  path: Assets/Prefabs/UI/UI.prefab
+  artifactKey: Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/UI.prefab using Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1181ebf16a123b38c34a7ec0cce924a8') in 0.010050 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 24.828142 seconds.
+  path: Assets/Prefabs/UI/HotBar.prefab
+  artifactKey: Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/HotBar.prefab using Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19d127c3fa46115d60fb1590b2a6b9e5') in 0.005452 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000310 seconds.
+  path: Assets/Prefabs/UI/UI.prefab
+  artifactKey: Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/UI.prefab using Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5dbd8d3944b5d96fc094b04246dbb4e') in 0.011735 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.077825 seconds.
+  path: Assets/Prefabs/UI/HotBar.prefab
+  artifactKey: Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/HotBar.prefab using Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ce7d887370922868067c3e228d2731b') in 0.005078 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000284 seconds.
+  path: Assets/Prefabs/UI/UI.prefab
+  artifactKey: Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/UI.prefab using Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fa726d9042381df95d54322ba9b9b6e') in 0.012697 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.939212 seconds.
+  path: Assets/Prefabs/UI/HotBar.prefab
+  artifactKey: Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/HotBar.prefab using Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ae553112b87fd90fee332227bd67292') in 0.004737 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000284 seconds.
+  path: Assets/Prefabs/UI/UI.prefab
+  artifactKey: Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/UI.prefab using Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c19cc9291ab7344cb08ef1c3ff2530c') in 0.011162 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.682114 seconds.
+  path: Assets/Prefabs/UI/HotBar.prefab
+  artifactKey: Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/HotBar.prefab using Guid(cf784e284ca818e428375a7f5f66afc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ed40a8bd376b2fe4505fad628d06994') in 0.005300 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/Prefabs/UI/UI.prefab
+  artifactKey: Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/UI.prefab using Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '297ac15998e22529aa27088c361c85fa') in 0.011701 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 37.713053 seconds.
+  path: Assets/Prefabs/UI/UI.prefab
+  artifactKey: Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/UI.prefab using Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64bcccd457fb39e138a3800e878637a5') in 0.010903 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.989448 seconds.
+  path: Assets/Prefabs/UI/UI.prefab
+  artifactKey: Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/UI.prefab using Guid(83e2bb5de04f31348919cda15dcfadac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cce7dcecb3a82fee1515ffcd98c9548') in 0.010030 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 53.764249 seconds.
+  path: Assets/Sprite/Button 1.png
+  artifactKey: Guid(ee2fbe61c64a63f40b7fb4e0b76b9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Button 1.png using Guid(ee2fbe61c64a63f40b7fb4e0b76b9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ef21274d0433475c9c3772f0989a6ed') in 0.085285 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.039027 seconds.
+  path: Assets/Sprite/Fill.png
+  artifactKey: Guid(ee2fbe61c64a63f40b7fb4e0b76b9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Fill.png using Guid(ee2fbe61c64a63f40b7fb4e0b76b9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b8ee649cf1959d376deb05f7832e1bb') in 0.014209 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.473619 seconds.
+  path: Assets/Sprite/Fill.png
+  artifactKey: Guid(ee2fbe61c64a63f40b7fb4e0b76b9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Fill.png using Guid(ee2fbe61c64a63f40b7fb4e0b76b9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '005824c95ef7bf274e55516841d97202') in 0.019193 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 128.486138 seconds.
+  path: Assets/Scripts/Player
+  artifactKey: Guid(4e8af7e22d1577b46ada65d25d81924f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player using Guid(4e8af7e22d1577b46ada65d25d81924f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6d22b37600f33f671ecf65b51527333') in 0.002748 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.824024 seconds.
+  path: Assets/Scripts/Player/Weapon
+  artifactKey: Guid(2c6798f96f79f754eb73697ec62e89c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/Weapon using Guid(2c6798f96f79f754eb73697ec62e89c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02ac079973d3fff47a793ea8232a6de2') in 0.003579 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.987701 seconds.
+  path: Assets/Scripts/Player/Weapon/OverHeat.cs
+  artifactKey: Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/Weapon/OverHeat.cs using Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8dd8600c0e536f847cfe633afb89f97') in 0.006708 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005118 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.08 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.243 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4008 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.5 MB.
+System memory in use after: 169.7 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 4641.
+Total: 2.916200 ms (FindLiveObjects: 0.448600 ms CreateObjectMapping: 0.204900 ms MarkObjects: 2.237000 ms  DeleteObjects: 0.024400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 56.460287 seconds.
+  path: Assets/Scripts/Player/Weapon/OverHeat.cs
+  artifactKey: Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/Weapon/OverHeat.cs using Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2173ff7a88b1449f6c26323b60e8d20') in 0.008543 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 67.358629 seconds.
+  path: Assets/Scripts/Player/Weapon/OverHeatBar.cs
+  artifactKey: Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/Weapon/OverHeatBar.cs using Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6977de1877ed3a3958aafdcdb871e78') in 0.003093 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.438364 seconds.
+  path: Assets/Scripts/Player/Weapon/OverHeatBar.cs
+  artifactKey: Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/Weapon/OverHeatBar.cs using Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2800c751451b55492c96d50e781616b6') in 0.003050 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 280.180876 seconds.
+  path: Assets/Scripts/Player/Weapon/OverHeatBar.cs
+  artifactKey: Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/Weapon/OverHeatBar.cs using Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ad152b0f8330f4dfe20d4b826653426') in 0.002934 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 36.033353 seconds.
+  path: Assets/Scripts/Player/Weapon/OverHeatBar.cs
+  artifactKey: Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/Weapon/OverHeatBar.cs using Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78d6a9b34dc9b149f405de95ff3eb863') in 0.002982 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 102.559826 seconds.
+  path: Assets/Scripts/Player/Weapon/OverHeatBar.cs
+  artifactKey: Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/Weapon/OverHeatBar.cs using Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8573426fa8104e6865ea4ed736c8b7f') in 0.003268 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.786042 seconds.
+  path: Assets/Scripts/Player/Weapon/OverHeatBar.cs
+  artifactKey: Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/Weapon/OverHeatBar.cs using Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa1663fc81b082053dd443bbbb81d204') in 0.003500 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.912342 seconds.
+  path: Assets/Scripts/Player/Weapon/OverHeatBar.cs
+  artifactKey: Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/Weapon/OverHeatBar.cs using Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15b1ef5758fc0bc6408da2e3085e9620') in 0.003750 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.149071 seconds.
+  path: Assets/Scripts/Player/Weapon/OverHeatBar.cs
+  artifactKey: Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/Weapon/OverHeatBar.cs using Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb19eeef236850ad050a0f2dc4b06cb7') in 0.002921 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.336804 seconds.
+  path: Assets/Scripts/Player/Weapon/OverHeatBar.cs
+  artifactKey: Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/Weapon/OverHeatBar.cs using Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adaefaa4001f53d44e86b50ca2881f70') in 0.003047 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.566656 seconds.
+  path: Assets/Scripts/Player/Weapon/OverHeatBar.cs
+  artifactKey: Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/Weapon/OverHeatBar.cs using Guid(e057dc0be9ef1864296f7ef444741338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2df369f1a9209d74ed0b6a2cc2d8f73f') in 0.003107 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004877 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.239 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.4 MB.
+System memory in use after: 169.7 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4643.
+Total: 2.882900 ms (FindLiveObjects: 0.346600 ms CreateObjectMapping: 0.103000 ms MarkObjects: 2.415200 ms  DeleteObjects: 0.016600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004774 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.203 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.5 MB.
+System memory in use after: 169.7 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4645.
+Total: 2.522500 ms (FindLiveObjects: 0.348000 ms CreateObjectMapping: 0.106200 ms MarkObjects: 2.050100 ms  DeleteObjects: 0.017300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004930 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.204 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.5 MB.
+System memory in use after: 169.7 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4647.
+Total: 2.653400 ms (FindLiveObjects: 0.330000 ms CreateObjectMapping: 0.103100 ms MarkObjects: 2.187000 ms  DeleteObjects: 0.031900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004646 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.96 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.328 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.23 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.5 MB.
+System memory in use after: 169.7 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4649.
+Total: 3.024600 ms (FindLiveObjects: 0.382000 ms CreateObjectMapping: 0.116200 ms MarkObjects: 2.506500 ms  DeleteObjects: 0.018600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006255 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.186 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.5 MB.
+System memory in use after: 169.7 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4651.
+Total: 2.949500 ms (FindLiveObjects: 0.329400 ms CreateObjectMapping: 0.099900 ms MarkObjects: 2.501600 ms  DeleteObjects: 0.017000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005219 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.220 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.5 MB.
+System memory in use after: 169.7 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4653.
+Total: 2.542300 ms (FindLiveObjects: 0.332600 ms CreateObjectMapping: 0.101500 ms MarkObjects: 2.090200 ms  DeleteObjects: 0.017000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006156 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.274 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.5 MB.
+System memory in use after: 169.8 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4655.
+Total: 2.813900 ms (FindLiveObjects: 0.421000 ms CreateObjectMapping: 0.236900 ms MarkObjects: 2.137800 ms  DeleteObjects: 0.017200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006116 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.79 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.211 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.5 MB.
+System memory in use after: 169.8 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4657.
+Total: 2.884300 ms (FindLiveObjects: 0.362600 ms CreateObjectMapping: 0.103200 ms MarkObjects: 2.399000 ms  DeleteObjects: 0.018000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004850 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.02 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.286 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.02 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.5 MB.
+System memory in use after: 169.8 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4659.
+Total: 3.485500 ms (FindLiveObjects: 0.493600 ms CreateObjectMapping: 0.181600 ms MarkObjects: 2.787300 ms  DeleteObjects: 0.020700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004952 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.86 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.263 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.5 MB.
+System memory in use after: 169.8 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4661.
+Total: 2.836400 ms (FindLiveObjects: 0.332400 ms CreateObjectMapping: 0.228500 ms MarkObjects: 2.257100 ms  DeleteObjects: 0.017200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006084 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.238 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.5 MB.
+System memory in use after: 169.8 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4663.
+Total: 2.864200 ms (FindLiveObjects: 0.344200 ms CreateObjectMapping: 0.106800 ms MarkObjects: 2.394900 ms  DeleteObjects: 0.016900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004651 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.273 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.5 MB.
+System memory in use after: 169.8 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4665.
+Total: 2.976400 ms (FindLiveObjects: 0.347200 ms CreateObjectMapping: 0.117800 ms MarkObjects: 2.475200 ms  DeleteObjects: 0.034700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004612 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.296 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.5 MB.
+System memory in use after: 169.8 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4667.
+Total: 2.731600 ms (FindLiveObjects: 0.383500 ms CreateObjectMapping: 0.133700 ms MarkObjects: 2.196700 ms  DeleteObjects: 0.016400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004601 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.301 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.5 MB.
+System memory in use after: 169.8 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4669.
+Total: 3.023600 ms (FindLiveObjects: 0.408600 ms CreateObjectMapping: 0.140800 ms MarkObjects: 2.453700 ms  DeleteObjects: 0.019200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006068 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.07 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.378 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.6 MB.
+System memory in use after: 169.8 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4671.
+Total: 2.911400 ms (FindLiveObjects: 0.332600 ms CreateObjectMapping: 0.268300 ms MarkObjects: 2.290300 ms  DeleteObjects: 0.019100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004845 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.07 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.380 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.6 MB.
+System memory in use after: 169.8 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4673.
+Total: 3.031900 ms (FindLiveObjects: 0.430400 ms CreateObjectMapping: 0.125600 ms MarkObjects: 2.454100 ms  DeleteObjects: 0.020500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005139 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.22 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.349 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.6 MB.
+System memory in use after: 169.8 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4675.
+Total: 2.868800 ms (FindLiveObjects: 0.335100 ms CreateObjectMapping: 0.105900 ms MarkObjects: 2.407800 ms  DeleteObjects: 0.018400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005208 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.79 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.354 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.6 MB.
+System memory in use after: 169.8 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4677.
+Total: 2.876000 ms (FindLiveObjects: 0.344600 ms CreateObjectMapping: 0.104700 ms MarkObjects: 2.407500 ms  DeleteObjects: 0.017800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005847 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.06 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.566 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.86 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.6 MB.
+System memory in use after: 169.9 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4679.
+Total: 2.832400 ms (FindLiveObjects: 0.352100 ms CreateObjectMapping: 0.133800 ms MarkObjects: 2.330100 ms  DeleteObjects: 0.015200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005615 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.370 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.6 MB.
+System memory in use after: 169.9 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4681.
+Total: 2.449300 ms (FindLiveObjects: 0.329900 ms CreateObjectMapping: 0.106600 ms MarkObjects: 1.997100 ms  DeleteObjects: 0.014700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005028 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.357 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.29 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.6 MB.
+System memory in use after: 169.9 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4683.
+Total: 2.523700 ms (FindLiveObjects: 0.338700 ms CreateObjectMapping: 0.103000 ms MarkObjects: 2.064900 ms  DeleteObjects: 0.015700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004896 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.424 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.6 MB.
+System memory in use after: 169.9 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4685.
+Total: 2.794000 ms (FindLiveObjects: 0.333800 ms CreateObjectMapping: 0.101800 ms MarkObjects: 2.337100 ms  DeleteObjects: 0.019500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006494 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.04 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.418 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.6 MB.
+System memory in use after: 169.9 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4687.
+Total: 2.954100 ms (FindLiveObjects: 0.368700 ms CreateObjectMapping: 0.117400 ms MarkObjects: 2.447200 ms  DeleteObjects: 0.019200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005340 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.395 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.6 MB.
+System memory in use after: 169.9 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4689.
+Total: 2.528300 ms (FindLiveObjects: 0.372900 ms CreateObjectMapping: 0.113400 ms MarkObjects: 2.026500 ms  DeleteObjects: 0.014500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006125 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.05 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.471 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.7 MB.
+System memory in use after: 169.9 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4691.
+Total: 2.916200 ms (FindLiveObjects: 0.338800 ms CreateObjectMapping: 0.102900 ms MarkObjects: 2.454100 ms  DeleteObjects: 0.018900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005334 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.428 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.7 MB.
+System memory in use after: 169.9 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4693.
+Total: 2.969700 ms (FindLiveObjects: 0.336500 ms CreateObjectMapping: 0.139700 ms MarkObjects: 2.472800 ms  DeleteObjects: 0.019000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006489 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.15 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.539 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.34 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.7 MB.
+System memory in use after: 169.9 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4695.
+Total: 2.910900 ms (FindLiveObjects: 0.377400 ms CreateObjectMapping: 0.109000 ms MarkObjects: 2.403700 ms  DeleteObjects: 0.019600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004609 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.531 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.04 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.7 MB.
+System memory in use after: 169.9 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4697.
+Total: 3.268300 ms (FindLiveObjects: 0.566500 ms CreateObjectMapping: 0.119600 ms MarkObjects: 2.558400 ms  DeleteObjects: 0.022200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004624 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.80 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.556 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.92 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.7 MB.
+System memory in use after: 169.9 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4699.
+Total: 2.996400 ms (FindLiveObjects: 0.390300 ms CreateObjectMapping: 0.103000 ms MarkObjects: 2.483000 ms  DeleteObjects: 0.018500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004904 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\Space-Attack\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.79 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.579 seconds
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.22 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.7 MB.
+System memory in use after: 169.9 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 4701.
+Total: 2.995400 ms (FindLiveObjects: 0.356100 ms CreateObjectMapping: 0.165100 ms MarkObjects: 2.454000 ms  DeleteObjects: 0.018900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
