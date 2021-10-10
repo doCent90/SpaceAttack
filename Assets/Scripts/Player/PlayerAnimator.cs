@@ -2,9 +2,7 @@ using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
 {
-    [SerializeField] private Animator _animator;
-
-    private Player _player;
+    private Animator _animator;
     private PlayerMover _mover;
     private AttackState _attack;
 
@@ -14,7 +12,7 @@ public class PlayerAnimator : MonoBehaviour
 
     private void OnEnable()
     {
-        _player = GetComponent<Player>();
+        _animator = GetComponentInChildren<Animator>();
         _mover = GetComponent<PlayerMover>();
         _attack = GetComponent<AttackState>();
 

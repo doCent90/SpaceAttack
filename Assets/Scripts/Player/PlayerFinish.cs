@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Finish : MonoBehaviour
+public class PlayerFinish : MonoBehaviour
 {
     private StateMachinePlayer _machinePlayer;
 

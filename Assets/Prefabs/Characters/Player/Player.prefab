@@ -281,8 +281,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3244902898704610398}
+  - component: {fileID: 8495890452871444915}
   m_Layer: 0
-  m_Name: CirlceGunePlace
+  m_Name: CirlceGunPlace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -303,6 +304,18 @@ Transform:
   m_Father: {fileID: 8881866896455407396}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &8495890452871444915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692638419801916527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d88879e961f376049ab23297225db664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &919927465806768580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1115,7 +1128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35d2cb9dcc080a4459c335d26ba4d75e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 3288355840313740638}
 --- !u!114 &6353589955896503869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1140,11 +1152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e06eb22ecb918294abd4783a324c6b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _points:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _moveDuration: 3
+  _moveDuration: 2
 --- !u!114 &1004092528788350833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1202,11 +1210,7 @@ MonoBehaviour:
   _laser: {fileID: 8990278911218989583}
   _aim: {fileID: 2259616480298546357}
   _shootFX: {fileID: 4579199446518339871}
-  _gun: {fileID: 9208256744585001836}
-  _gunPlace: {fileID: 1589741568601527813}
-  _cirlceGunPlace: {fileID: 3244902898704610398}
   _speedRotate: 30
-  _targets: []
 --- !u!114 &1458372772023878372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1568,6 +1572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1589741568601527813}
+  - component: {fileID: 8870959606402295499}
   m_Layer: 0
   m_Name: GunPlace
   m_TagString: Untagged
@@ -1590,6 +1595,18 @@ Transform:
   m_Father: {fileID: 3244902898704610398}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
+--- !u!114 &8870959606402295499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4168123302886852881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a80dd8e27265ad44a79167384ad7200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4186843964626906442
 GameObject:
   m_ObjectHideFlags: 0

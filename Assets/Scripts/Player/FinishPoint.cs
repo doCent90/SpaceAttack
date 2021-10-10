@@ -8,13 +8,13 @@ public class FinishPoint : MonoBehaviour
 
     private PlayerMover _playerMover;
     private CameraMover _cameraMover;
-    private Finish _celebration;
+    private PlayerFinish _celebration;
 
     private void OnEnable()
     {
         _playerMover = FindObjectOfType<PlayerMover>();
         _cameraMover = FindObjectOfType<CameraMover>();
-        _celebration = FindObjectOfType<Finish>();
+        _celebration = FindObjectOfType<PlayerFinish>();
 
         _playerMover.LastPointCompleted += EndLevel;
     }

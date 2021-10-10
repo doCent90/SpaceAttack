@@ -5020,10 +5020,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 437783426810812411, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 437783426810812411, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
@@ -5094,10 +5090,6 @@ PrefabInstance:
     - target: {fileID: 3682617119485479547, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -23.005981
-      objectReference: {fileID: 0}
-    - target: {fileID: 5462800157783629716, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
-      propertyPath: _multiDown
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6938905631064532006, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
       propertyPath: m_SizeDelta.x
@@ -5254,10 +5246,6 @@ PrefabInstance:
     - target: {fileID: 8953673467173649734, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9108792137635977254, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
-      propertyPath: m_Color.a
-      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
