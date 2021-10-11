@@ -1,96 +1,123 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Animator))]
 public class AttackState : StatePlayer
 {
     [SerializeField] private ParticleSystem _shootFX;
     [SerializeField] private GameObject _laser;
-    [SerializeField] private ParticalCollisions _particalCollisions;
-    [SerializeField] private Transform _gunPoint;
+    [SerializeField] private Transform _gun;
+    [SerializeField] private Transform _gunPlace;
+    [SerializeField] private Transform _cirlceGunPlace;
     [Header("Settings of Shoot Position")]
-    [SerializeField] private float _speed;
+    [SerializeField] private float _speedRotate;
+    [Header("Targets")]
+    [SerializeField] private Enemy[] _targets;
 
-    private Animator _animator;
     private PlayerShooter _playerShooter;
 
     private float _elapsedTime;
-    private int _direction = 1;
-    private int _attackCount = 1;
+    private bool _hasRightEdgeDone;
+    private int _indexTarget = 0;
 
-    private const int LeftRotate = 1;
-    private const int RightRotate = -1;
-    private const float DelayBetweenShoot = 0.1f;
-    private const float TimeScaleNormal = 1f;
-    private const float TimeScaleRapid = 0.4f;
-    private const string ShootAnimation = "Shoot";
-    private const string TargetAnimation = "LockTarget";
+
+    private const float RightRange = 359;
+    private const float LeftRange = 330;
+    private const float StartAngle = 15;
+    private const float DelayBetweenShoot = 0.2f;
+    private const float TimeScaleRapid = 0.3f;
+    private const float TimeScaleSpeed = 3f;
 
     public event UnityAction<bool> Attacked;
+    public event UnityAction Shoted;
 
     private void OnEnable()
     {
         Attacked?.Invoke(true);
+        SetStartAngle();
 
-        SetAngle();
-
-        Time.timeScale = TimeScaleRapid;
-
-        if (_attackCount % 2 == 0)
-            _direction = RightRotate;
-        else
-            _direction = LeftRotate;
-
+        _hasRightEdgeDone = true;
         _laser.SetActive(true);
-        _particalCollisions.enabled = true;
-        _attackCount++;
     }
 
     private void OnDisable()
     {
         Attacked?.Invoke(false);
-
-        Time.timeScale = TimeScaleNormal;
         _laser.SetActive(false);
-        _animator.SetBool(TargetAnimation, false);
+        ResetAngle();
     }
 
     private void Start()
     {        
         _playerShooter = GetComponent<PlayerShooter>();
-        _animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        RotateGun();
-
-        _animator.SetBool(TargetAnimation, true);
-        _elapsedTime += Time.deltaTime;
-
-        if (Input.GetMouseButtonDown(0) && _elapsedTime >= DelayBetweenShoot)
+        if (Time.timeScale != TimeScaleRapid)
+            SlowDownTime();
+        else
         {
-            Attack();
-            _elapsedTime = 0;
+            if (_hasRightEdgeDone)
+            {
+                RotateGunLeft();
+            }
+            else if (!_hasRightEdgeDone)
+            {
+                RotateGunRihgt();
+            }
+
+            _elapsedTime += Time.deltaTime;
+
+            if (Input.GetMouseButtonDown(0) && _elapsedTime >= DelayBetweenShoot)
+            {
+                Attack();
+                _elapsedTime = 0;
+            }
         }
     }
 
-    private void SetAngle()
+    private void SlowDownTime()
     {
-        //_spaceShip.eulerAngles = new Vector3(_spaceShip.position.x, 0, 0);
+        float time = Time.timeScale;
+        time = Mathf.MoveTowards(time, TimeScaleRapid, TimeScaleSpeed * Time.deltaTime);
+        Time.timeScale = time;
     }
 
-    private void RotateGun()
+    private void SetStartAngle()
     {
-        if (_direction == LeftRotate)
-            _gunPoint.Rotate(Vector3.down, _speed * Time.deltaTime);
-        else if (_direction == RightRotate)
-            _gunPoint.Rotate(Vector3.up, _speed * Time.deltaTime);
+        Transform positions = _cirlceGunPlace;
+        positions.LookAt(_targets[_indexTarget].transform);
+
+        _cirlceGunPlace.localEulerAngles = new Vector3(0, positions.localEulerAngles.y, 0);
+        _cirlceGunPlace.localEulerAngles += new Vector3(0, StartAngle, 0);
+
+        _indexTarget++;
+    }
+
+    private void ResetAngle()
+    {
+        _cirlceGunPlace.localEulerAngles = new Vector3(0, 0, 0);
+    }
+
+    private void RotateGunLeft()
+    {
+        _gunPlace.localEulerAngles -= new Vector3(0, _speedRotate * Time.deltaTime, 0);
+
+        if (_gunPlace.localEulerAngles.y < LeftRange)
+            _hasRightEdgeDone = false;
+    }
+
+    private void RotateGunRihgt()
+    {
+        _gunPlace.localEulerAngles += new Vector3(0, _speedRotate * Time.deltaTime, 0);
+
+        if (_gunPlace.localEulerAngles.y > RightRange)
+            _hasRightEdgeDone = true;
     }
 
     private void Attack()
     {
-        _animator.SetTrigger(ShootAnimation);
+        Shoted?.Invoke();
         _playerShooter.Shoot();
         _shootFX.Play();
     }

@@ -1,16 +1,19 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FinishPoint : MonoBehaviour
 {
+    [SerializeField] private Text _winText;
+
     private PlayerMover _playerMover;
     private CameraMover _cameraMover;
-    private Celebration _celebration;
+    private Finish _celebration;
 
     private void OnEnable()
     {
         _playerMover = FindObjectOfType<PlayerMover>();
         _cameraMover = FindObjectOfType<CameraMover>();
-        _celebration = FindObjectOfType<Celebration>();
+        _celebration = FindObjectOfType<Finish>();
 
         _playerMover.LastPointCompleted += EndLevel;
     }
@@ -24,5 +27,6 @@ public class FinishPoint : MonoBehaviour
     {
         _cameraMover.enabled = false;
         _celebration.enabled = true;
+        _winText.enabled = true;
     }
 }

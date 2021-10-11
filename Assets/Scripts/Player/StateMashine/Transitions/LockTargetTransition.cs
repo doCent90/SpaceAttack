@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class LockTargetTransition : TransitionPlayer
 {
     private PlayerMover _playerMover;

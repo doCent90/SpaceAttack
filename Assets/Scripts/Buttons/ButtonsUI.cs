@@ -21,6 +21,7 @@ public class ButtonsUI : MonoBehaviour
 
     private Player _player;
     private PlayerMover _playerMover;
+    private BackGroundMover _groundMover;
 
     public event UnityAction Clicked;
 
@@ -83,9 +84,9 @@ public class ButtonsUI : MonoBehaviour
     private void OnEnable()
     {
         _player = FindObjectOfType<Player>();
+        _groundMover = FindObjectOfType<BackGroundMover>();
         _playerMover = _player.GetComponent<PlayerMover>();
 
-        _player.Died += ShowRetryButton;
         _playerMover.LastPointCompleted += ShowContinueButton;
 
         Init();
@@ -93,7 +94,6 @@ public class ButtonsUI : MonoBehaviour
 
     private void OnDisable()
     {
-        _player.Died -= ShowRetryButton;
         _playerMover.LastPointCompleted -= ShowContinueButton;
     }
 

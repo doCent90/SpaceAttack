@@ -5,30 +5,42 @@ using UnityEngine.Events;
 [RequireComponent(typeof(PlayerShooter))]
 public class Player : MonoBehaviour
 {
-    private Animator _animator;
-    private PlayerMover _playerMover;
+    private StateMachinePlayer _stateMachine;
     private AttackState _attackState;
-    private StateMachinePlayer _stateMachinePlayer;
+    private TargetDieTransition _targetDie;
+    private PlayerMover _mover;
+    private GameOverField _gameOver;
 
-    private const string DieAnimation = "Die";
+    public event UnityAction Started;
 
-    public event UnityAction Died;
-
-    public void TakeDamage()
+    private void OnEnable()
     {
-        _playerMover.enabled = false;
-        _attackState.enabled = false;
-        _animator.SetTrigger(DieAnimation);
-        Died?.Invoke();
+        Started?.Invoke();
     }
 
     private void Start()
     {
-        _animator = GetComponent<Animator>();
-        _playerMover = GetComponent<PlayerMover>();
+        _gameOver = FindObjectOfType<GameOverField>();
+        _mover = GetComponent<PlayerMover>();
+        _stateMachine = GetComponent<StateMachinePlayer>();
         _attackState = GetComponent<AttackState>();
-        _stateMachinePlayer = GetComponent<StateMachinePlayer>();
+        _targetDie = GetComponent<TargetDieTransition>();
 
-        _stateMachinePlayer.enabled = true;
+        _gameOver.Defeated += StopGame;
+        _stateMachine.enabled = true;
+    }
+
+    private void OnDisable()
+    {
+        _gameOver.Defeated += StopGame;
+    }
+
+    private void StopGame()
+    {
+        enabled = false;
+        _mover.enabled = false;
+        _stateMachine.enabled = false;
+        _attackState.enabled = false;
+        _targetDie.enabled = false;
     }
 }

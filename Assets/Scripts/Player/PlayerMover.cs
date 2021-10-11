@@ -3,7 +3,6 @@ using DG.Tweening;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Player))]
-[RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMover : MonoBehaviour
 {
@@ -12,19 +11,16 @@ public class PlayerMover : MonoBehaviour
 
     private int _currentPointIndex = 0;
 
-    private Animator _animator;
     private Rigidbody _rigidbodySpceShip;
-
-    private const string RunAnimation = "Run";
 
     public bool IsLastWayPoint { get; private set; }
     public bool HasCurrentPositions { get; private set; }
 
-    public UnityAction LastPointCompleted;
+    public event UnityAction LastPointCompleted;
+    public event UnityAction<bool> Moved;
 
     private void OnEnable()
     {
-        _animator = GetComponent<Animator>();
         _rigidbodySpceShip = GetComponent<Rigidbody>();
 
         HasCurrentPositions = false;
@@ -33,8 +29,7 @@ public class PlayerMover : MonoBehaviour
 
     private void OnDisable()
     {
-        _animator.SetBool(RunAnimation, false);
-
+        Moved?.Invoke(false);
         HasCurrentPositions = false;
     }
 
@@ -45,10 +40,7 @@ public class PlayerMover : MonoBehaviour
             _currentPointIndex++;
             Move();
             LastPointCompleted?.Invoke();
-
             HasCurrentPositions = false;
-
-            Debug.Log("PreLastPoint");
         }
         else
         {
@@ -61,10 +53,10 @@ public class PlayerMover : MonoBehaviour
     {
         if (_currentPointIndex != _points.Length)
         {
-            _animator.SetBool(RunAnimation, true);
-
+            Moved?.Invoke(true);
             var tweenMove = _rigidbodySpceShip.DOMove(_points[_currentPointIndex].position, _moveDuration);
-            tweenMove.SetEase(Ease.InOutBack).OnComplete(ChangeCurrentIndexPosition);
+            tweenMove.SetEase(Ease.InOutBack);
+            tweenMove.OnComplete(ChangeCurrentIndexPosition);
         }
     }
 }

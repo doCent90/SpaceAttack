@@ -1,20 +1,20 @@
 public class SoundsPlayer : SoundsPlaying
 {
-    private Player _player;
+    private PlayerMover _player;
     private PlayerShooter _playerShooter;
 
     private void Start()
     {
-        _player = GetComponentInParent<Player>();
+        _player = GetComponentInParent<PlayerMover>();
         _playerShooter = GetComponentInParent<PlayerShooter>();
 
-        _player.Died += PlayDeath;
-        _playerShooter.ShotFired += PlayShot;
+        _playerShooter.ShotFired += Shot;
+        _player.Moved += Fly;
     }
 
     private void OnDisable()
     {
-        _player.Died -= PlayDeath;
-        _playerShooter.ShotFired -= PlayShot;
+        _playerShooter.ShotFired -= Shot;
+        _player.Moved -= Fly;
     }
 }

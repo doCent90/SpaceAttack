@@ -7,9 +7,6 @@ public class StartSession : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log(PlayerPrefs.GetInt(SessionCount));
-        //Init();
-
         int sessionCount = PlayerPrefs.GetInt(SessionCount);
 
         if (sessionCount != 0)
