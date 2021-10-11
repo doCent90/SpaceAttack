@@ -5098,10 +5098,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1013454797}
-    - target: {fileID: 8953673466499273709, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 8953673466722465215, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
       propertyPath: m_IsActive
       value: 0

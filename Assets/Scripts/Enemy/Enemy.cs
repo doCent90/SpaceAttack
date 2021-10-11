@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     private AttackState _attackStatePlayer;
     private SkinnedMeshRenderer _meshRenderer;
     private Color _currentColor;
+
     private bool _hasCurrentColor = true;
     private bool _isReady = false;
     private float _elapsedTime = 0;

@@ -4,8 +4,6 @@ using UnityEngine.Events;
 
 public class ButtonsUI : MonoBehaviour
 {
-    [SerializeField] private StartGame _game;
-    [SerializeField] private GameLevelsLoader _loadLevel;
     [Header("Buttons")]
     [SerializeField] private Button _buttonStart;
     [SerializeField] private Button _buttonRetry;
@@ -15,13 +13,22 @@ public class ButtonsUI : MonoBehaviour
     [SerializeField] private Button _openOptions;
     [SerializeField] private Button _closeOptions;
     [Header("Sound")]
-    [SerializeField] private SoundsFXSettings _soundMaster;
     [SerializeField] private Button _onSoundButton;
     [SerializeField] private Button _offSoundButton;
 
-    private Player _player;
+    private SoundsFXSettings _soundMaster;
+    private GameLevelsLoader _loadLevel;
+    private GameOverField _gameOver;
     private PlayerMover _playerMover;
-    private BackGroundMover _groundMover;
+    private StartGame _game;
+    private Player _player;
+
+    private float _elapsedTime = 0;
+    private bool _isLevelDone = false;
+
+    private const string LevelComplete = "level_complete";
+    private const string TimeSpent = "time_spent_lvl_complete";
+    private const string Restart = "restart";
 
     public event UnityAction Clicked;
 
@@ -34,15 +41,22 @@ public class ButtonsUI : MonoBehaviour
     public void RetryLevel()
     {
         _buttonRetry.gameObject.SetActive(false);
-        Clicked?.Invoke();
         _loadLevel.Retry();
+        Clicked?.Invoke();
+
+        Amplitude.Instance.logEvent(Restart, _loadLevel.Level);
     }
 
     public void NextLevel()
     {
         _buttonContinue.gameObject.SetActive(false);
-        Clicked?.Invoke();
         _loadLevel.LoadNext();
+        Clicked?.Invoke();
+
+        _isLevelDone = true;
+
+        Amplitude.Instance.logEvent(LevelComplete, _loadLevel.Level);
+        Amplitude.Instance.logEvent(TimeSpent, (int)_elapsedTime);
     }
 
     public void OpenSettings()
@@ -84,10 +98,14 @@ public class ButtonsUI : MonoBehaviour
     private void OnEnable()
     {
         _player = FindObjectOfType<Player>();
-        _groundMover = FindObjectOfType<BackGroundMover>();
+        _game = FindObjectOfType<StartGame>();
+        _gameOver = FindObjectOfType<GameOverField>();
+        _loadLevel = FindObjectOfType<GameLevelsLoader>();
         _playerMover = _player.GetComponent<PlayerMover>();
+        _soundMaster = FindObjectOfType<SoundsFXSettings>();
 
         _playerMover.LastPointCompleted += ShowContinueButton;
+        _gameOver.Defeated += ShowRetryButton;
 
         Init();
     }
@@ -95,6 +113,7 @@ public class ButtonsUI : MonoBehaviour
     private void OnDisable()
     {
         _playerMover.LastPointCompleted -= ShowContinueButton;
+        _gameOver.Defeated -= ShowRetryButton;
     }
 
     private void Init()
@@ -124,5 +143,11 @@ public class ButtonsUI : MonoBehaviour
     private void ShowContinueButton()
     {
         _buttonContinue.gameObject.SetActive(true);
+    }
+
+    private void Update()
+    {
+        if(!_isLevelDone)
+            _elapsedTime += Time.deltaTime;
     }
 }

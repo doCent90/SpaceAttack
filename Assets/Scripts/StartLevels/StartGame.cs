@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,11 +7,13 @@ public class StartGame : MonoBehaviour
     private Player _player;
     private PlayerMover _playerMover;
     private BackGroundMover _backGroundMover;
-    private Dictionary<string, int> _session = new Dictionary<string, int>();
+
     private int _countStartSessions = 0;
 
     private const string CountSessions = "CountSessions";
+    private const string CountDaysGame = "days_in_game";
     private const string GameStart = "game_start";
+    private const string RegDay = "reg_day";
 
     public void StartLevel()
     {
@@ -29,16 +32,9 @@ public class StartGame : MonoBehaviour
     private void Start()
     {
         Init();
-
-        _countStartSessions = PlayerPrefs.GetInt(CountSessions);
-        _countStartSessions++;
-
-        _session.Add(CountSessions, _countStartSessions);
-
-        PlayerPrefs.SetInt(CountSessions, _countStartSessions);
-        Amplitude.Instance.logEvent(GameStart, _session[CountSessions]);
-
-        _session.Clear();
+        SetRegDay();
+        SetDaysInGame();
+        SetCountSessions();
     }
 
     private void Init()
@@ -48,5 +44,43 @@ public class StartGame : MonoBehaviour
         amplitude.logging = true;
         amplitude.trackSessionEvents(true);
         amplitude.init("????");
+    }
+
+    private void SetCountSessions()
+    {
+        _countStartSessions = PlayerPrefs.GetInt(CountSessions);
+        _countStartSessions++;
+
+        PlayerPrefs.SetInt(CountSessions, _countStartSessions);
+        Amplitude.Instance.logEvent(GameStart, _countStartSessions);
+    }
+
+    private void SetDaysInGame()
+    {
+        var days = PlayerPrefs.GetInt(CountDaysGame);
+        days++;
+
+        PlayerPrefs.SetInt(CountDaysGame, days);
+        Amplitude.Instance.logEvent(CountDaysGame, days);
+    }
+
+    private void SetRegDay()
+    {
+        int False = 0;
+        int True = 1;
+
+        int day = DateTime.Now.Day;
+        int month = DateTime.Now.Month;
+        int year = DateTime.Now.Year;
+
+        if (True != PlayerPrefs.GetInt(RegDay))
+            return;
+        else
+        {
+            Amplitude.Instance.logEvent(RegDay, day+month+year);
+        }
+
+        if (PlayerPrefs.GetInt(RegDay) == False)
+            PlayerPrefs.SetInt(RegDay, True);
     }
 }
