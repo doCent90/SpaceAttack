@@ -1,8 +1,11 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class GameOverField : MonoBehaviour
 {
+    [SerializeField] Text _text;
+
     private BackGroundMover _groundMover;
 
     public event UnityAction Defeated;
@@ -10,6 +13,7 @@ public class GameOverField : MonoBehaviour
     private void OnEnable()
     {
         _groundMover = GetComponentInParent<BackGroundMover>();
+        _text.enabled = false;
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -18,6 +22,7 @@ public class GameOverField : MonoBehaviour
         {
             Defeated?.Invoke();
             _groundMover.enabled = false;
+            _text.enabled = true;
         }
     }
 }

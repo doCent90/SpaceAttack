@@ -6,12 +6,13 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMover : MonoBehaviour
 {
-    [SerializeField] Transform[] _points;
     [SerializeField] private float _moveDuration;
 
+    private EnemiesOnPoint _enemiiesOnPoint;
+    private WayPoint[] _wayPoints;
     private int _currentPointIndex = 0;
 
-    private Rigidbody _rigidbodySpceShip;
+    private Rigidbody _rigidbodySpaceShip;
 
     public bool IsLastWayPoint { get; private set; }
     public bool HasCurrentPositions { get; private set; }
@@ -21,7 +22,9 @@ public class PlayerMover : MonoBehaviour
 
     private void OnEnable()
     {
-        _rigidbodySpceShip = GetComponent<Rigidbody>();
+        _rigidbodySpaceShip = GetComponent<Rigidbody>();
+        _enemiiesOnPoint = FindObjectOfType<EnemiesOnPoint>();
+        FillWayPoints();
 
         HasCurrentPositions = false;
         Move();
@@ -33,9 +36,14 @@ public class PlayerMover : MonoBehaviour
         HasCurrentPositions = false;
     }
 
+    private void FillWayPoints()
+    {
+        _wayPoints = _enemiiesOnPoint.GetComponentsInChildren<WayPoint>();
+    }
+
     private void ChangeCurrentIndexPosition()
     {
-        if (_currentPointIndex == (_points.Length - 2))
+        if (_currentPointIndex == (_wayPoints.Length - 2))
         {
             _currentPointIndex++;
             Move();
@@ -51,11 +59,11 @@ public class PlayerMover : MonoBehaviour
 
     private void Move()
     {
-        if (_currentPointIndex != _points.Length)
+        if (_currentPointIndex != _wayPoints.Length)
         {
             Moved?.Invoke(true);
-            var tweenMove = _rigidbodySpceShip.DOMove(_points[_currentPointIndex].position, _moveDuration);
-            tweenMove.SetEase(Ease.InOutBack);
+            var tweenMove = _rigidbodySpaceShip.DOMove(_wayPoints[_currentPointIndex].transform.position, _moveDuration);
+            tweenMove.SetEase(Ease.InBack);
             tweenMove.OnComplete(ChangeCurrentIndexPosition);
         }
     }

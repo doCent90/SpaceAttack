@@ -2,7 +2,9 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(PlayerMover))]
-[RequireComponent(typeof(PlayerShooter))]
+[RequireComponent(typeof(TargetDieTransition))]
+[RequireComponent(typeof(AttackState))]
+[RequireComponent(typeof(StateMachinePlayer))]
 public class Player : MonoBehaviour
 {
     private StateMachinePlayer _stateMachine;

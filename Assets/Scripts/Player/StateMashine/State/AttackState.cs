@@ -3,122 +3,117 @@ using UnityEngine.Events;
 
 public class AttackState : StatePlayer
 {
-    [SerializeField] private ParticleSystem _shootFX;
+    [Header("Laser")]
     [SerializeField] private GameObject _laser;
-    [SerializeField] private Transform _gun;
-    [SerializeField] private Transform _gunPlace;
-    [SerializeField] private Transform _cirlceGunPlace;
-    [Header("Settings of Shoot Position")]
+    [SerializeField] private GameObject _aim;
+    [SerializeField] private ParticleSystem _shootFX;
+    [Header("Settings of Shot")]
     [SerializeField] private float _speedRotate;
-    [Header("Targets")]
-    [SerializeField] private Enemy[] _targets;
 
-    private PlayerShooter _playerShooter;
-
-    private float _elapsedTime;
+    private CirlceGunPlace _cirlceGunPlace;
+    private GunPlace _gunPlace;
+    private OverHeatBar _overHeat;
+    private bool _isOverHeated = false;
     private bool _hasRightEdgeDone;
-    private int _indexTarget = 0;
+    private int _indexTarget = 1;
 
+    private const float RightRange = 210f;
+    private const float LeftRange = 145f;
+    private const float StartPositionCirlceGunPlace = 180f;
 
-    private const float RightRange = 359;
-    private const float LeftRange = 330;
-    private const float StartAngle = 15;
-    private const float DelayBetweenShoot = 0.2f;
-    private const float TimeScaleRapid = 0.3f;
-    private const float TimeScaleSpeed = 3f;
-
-    public event UnityAction<bool> Attacked;
+    public event UnityAction<bool> ReadyToAttacked;
+    public event UnityAction<bool> Fired;
     public event UnityAction Shoted;
 
     private void OnEnable()
     {
-        Attacked?.Invoke(true);
+        _overHeat = FindObjectOfType<OverHeatBar>();
+        _gunPlace = GetComponentInChildren<GunPlace>();
+        _cirlceGunPlace = GetComponentInChildren<CirlceGunPlace>();
+        _overHeat.OverHeated += ResetAttake;
+
+        ReadyToAttacked?.Invoke(true);
         SetStartAngle();
 
+        _laser.SetActive(false);
         _hasRightEdgeDone = true;
-        _laser.SetActive(true);
+        _aim.SetActive(true);
     }
 
     private void OnDisable()
     {
-        Attacked?.Invoke(false);
-        _laser.SetActive(false);
-        ResetAngle();
-    }
+        _overHeat.OverHeated -= ResetAttake;
 
-    private void Start()
-    {        
-        _playerShooter = GetComponent<PlayerShooter>();
+        ReadyToAttacked?.Invoke(false);
+        Fired?.Invoke(false);
+
+        _laser.SetActive(false);
+        _aim.SetActive(false);
     }
 
     private void Update()
     {
-        if (Time.timeScale != TimeScaleRapid)
-            SlowDownTime();
-        else
+        if (_hasRightEdgeDone)
         {
-            if (_hasRightEdgeDone)
-            {
-                RotateGunLeft();
-            }
-            else if (!_hasRightEdgeDone)
-            {
-                RotateGunRihgt();
-            }
-
-            _elapsedTime += Time.deltaTime;
-
-            if (Input.GetMouseButtonDown(0) && _elapsedTime >= DelayBetweenShoot)
-            {
-                Attack();
-                _elapsedTime = 0;
-            }
+            RotateGunLeft();
         }
-    }
+        else if (!_hasRightEdgeDone)
+        {
+            RotateGunRihgt();
+        }
 
-    private void SlowDownTime()
-    {
-        float time = Time.timeScale;
-        time = Mathf.MoveTowards(time, TimeScaleRapid, TimeScaleSpeed * Time.deltaTime);
-        Time.timeScale = time;
+        if (Input.GetMouseButton(0) && !_isOverHeated)
+            Attack(true);
+        else
+            Attack(false);
     }
 
     private void SetStartAngle()
     {
-        Transform positions = _cirlceGunPlace;
-        positions.LookAt(_targets[_indexTarget].transform);
+        _cirlceGunPlace.transform.localEulerAngles = new Vector3(0, StartPositionCirlceGunPlace, 0);
 
-        _cirlceGunPlace.localEulerAngles = new Vector3(0, positions.localEulerAngles.y, 0);
-        _cirlceGunPlace.localEulerAngles += new Vector3(0, StartAngle, 0);
+        if(_indexTarget % 2 == 0)
+            _gunPlace.transform.transform.localEulerAngles = new Vector3(0, LeftRange, 0);
+        else
+            _gunPlace.transform.localEulerAngles = new Vector3(0, RightRange, 0);
 
         _indexTarget++;
     }
 
-    private void ResetAngle()
-    {
-        _cirlceGunPlace.localEulerAngles = new Vector3(0, 0, 0);
-    }
-
     private void RotateGunLeft()
     {
-        _gunPlace.localEulerAngles -= new Vector3(0, _speedRotate * Time.deltaTime, 0);
+        _gunPlace.transform.localEulerAngles -= new Vector3(0, _speedRotate * Time.deltaTime, 0);
 
-        if (_gunPlace.localEulerAngles.y < LeftRange)
+        if (_gunPlace.transform.localEulerAngles.y < LeftRange)
             _hasRightEdgeDone = false;
     }
 
     private void RotateGunRihgt()
     {
-        _gunPlace.localEulerAngles += new Vector3(0, _speedRotate * Time.deltaTime, 0);
+        _gunPlace.transform.localEulerAngles += new Vector3(0, _speedRotate * Time.deltaTime, 0);
 
-        if (_gunPlace.localEulerAngles.y > RightRange)
+        if (_gunPlace.transform.localEulerAngles.y > RightRange)
             _hasRightEdgeDone = true;
     }
 
-    private void Attack()
+    private void Attack(bool isShooting)
     {
-        Shoted?.Invoke();
-        _playerShooter.Shoot();
-        _shootFX.Play();
+        Fired?.Invoke(isShooting);
+
+        if (isShooting)
+        {
+            Shoted?.Invoke();
+            _shootFX.Play();
+            _laser.SetActive(true);
+        }
+        else
+        {
+            _laser.SetActive(false);
+        }
+    }
+
+    private void ResetAttake(bool isOverHeated)
+    {
+        _isOverHeated = isOverHeated;
     }
 }
