@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class StartGame : MonoBehaviour
@@ -5,6 +6,18 @@ public class StartGame : MonoBehaviour
     private Player _player;
     private PlayerMover _playerMover;
     private BackGroundMover _backGroundMover;
+    private Dictionary<string, int> _session = new Dictionary<string, int>();
+    private int _countStartSessions = 0;
+
+    private const string CountSessions = "CountSessions";
+    private const string GameStart = "game_start";
+
+    public void StartLevel()
+    {
+        _player.enabled = true;
+        _playerMover.enabled = true;
+        _backGroundMover.enabled = true;
+    }
 
     private void OnEnable()
     {
@@ -13,10 +26,27 @@ public class StartGame : MonoBehaviour
         _backGroundMover = FindObjectOfType<BackGroundMover>();
     }
 
-    public void StartLevel()
+    private void Start()
     {
-        _player.enabled = true;
-        _playerMover.enabled = true;
-        _backGroundMover.enabled = true;
+        Init();
+
+        _countStartSessions = PlayerPrefs.GetInt(CountSessions);
+        _countStartSessions++;
+
+        _session.Add(CountSessions, _countStartSessions);
+
+        PlayerPrefs.SetInt(CountSessions, _countStartSessions);
+        Amplitude.Instance.logEvent(GameStart, _session[CountSessions]);
+
+        _session.Clear();
+    }
+
+    private void Init()
+    {
+        Amplitude amplitude = Amplitude.getInstance();
+        amplitude.setServerUrl("https://api2.amplitude.com");
+        amplitude.logging = true;
+        amplitude.trackSessionEvents(true);
+        amplitude.init("????");
     }
 }
