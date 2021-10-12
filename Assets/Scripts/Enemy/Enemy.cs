@@ -6,16 +6,17 @@ using UnityEngine.Events;
 [RequireComponent(typeof(EnemyAnimator))]
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem _bloodFX;
     [SerializeField] private Material _dieMaterial;
-    [SerializeField] private SkinnedMeshRenderer _renderer;
     [SerializeField] private Color _targetColor;
 
+    private ParticleSystem[] _particalFX;
+    private SkinnedMeshRenderer _renderer;
     private EnemyMover _mover;
     private AttackState _attackStatePlayer;
     private SkinnedMeshRenderer _meshRenderer;
     private Color _currentColor;
 
+    private bool _hasInvisible = false;
     private bool _hasCurrentColor = true;
     private bool _isReady = false;
     private float _elapsedTime = 0;
@@ -26,12 +27,29 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage()
     {
-        _bloodFX.Play();
-        _mover.enabled = true;
+        if (!_hasInvisible)
+        {
+            Died?.Invoke();
+            SetDieMaterial();
 
-        Died?.Invoke();
+            PlayFX();
+            _mover.enabled = true;
 
-        enabled = false;
+            enabled = false;
+        }
+    }
+
+    public void SetTempInvisible(bool hasInvis)
+    {
+        _hasInvisible = hasInvis;
+    }
+
+    private void PlayFX()
+    {
+        foreach (var partical in _particalFX)
+        {
+            partical.Play();
+        }
     }
 
     private void OnEnable()
@@ -39,6 +57,9 @@ public class Enemy : MonoBehaviour
         _mover = GetComponent<EnemyMover>();
         _attackStatePlayer = FindObjectOfType<AttackState>();
         _meshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
+
+        _particalFX = GetComponentsInChildren<ParticleSystem>();
+        _renderer = GetComponentInChildren<SkinnedMeshRenderer>();
 
         _attackStatePlayer.ReadyToAttacked += OnReadyToAttack;
         _currentColor = _meshRenderer.material.color;
@@ -48,7 +69,6 @@ public class Enemy : MonoBehaviour
     private void OnDisable()    
     {
         _attackStatePlayer.ReadyToAttacked -= OnReadyToAttack;
-        SetDieMaterial();
     }
 
     private void OnReadyToAttack(bool isReady)

@@ -3086,6 +3086,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b279ddb0b2c3a4246b6b3eaa3311251e, type: 3}
+--- !u!4 &830599678 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6399254804718605913, guid: 49f600d500e36d04b9c381d02547b6b5, type: 3}
+  m_PrefabInstance: {fileID: 8309002043205787466}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &857490660
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4230,6 +4235,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1585851484 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6399254805797768003, guid: 49f600d500e36d04b9c381d02547b6b5, type: 3}
+  m_PrefabInstance: {fileID: 8309002043205787466}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1626382832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5011,12 +5021,24 @@ PrefabInstance:
       value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3682617119485479547, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 904.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682617119485479547, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 239.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682617119485479547, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682617119485479547, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -498.00412
+      value: -519.2
       objectReference: {fileID: 0}
     - target: {fileID: 3682617119485479547, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -23.005981
+      value: -23
       objectReference: {fileID: 0}
     - target: {fileID: 6938905631064532006, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
       propertyPath: m_SizeDelta.x
@@ -5591,6 +5613,22 @@ PrefabInstance:
       propertyPath: _winText
       value: 
       objectReference: {fileID: 2043922770}
+    - target: {fileID: 579775608798693609, guid: 49f600d500e36d04b9c381d02547b6b5, type: 3}
+      propertyPath: _nextWayPoint
+      value: 
+      objectReference: {fileID: 1585851484}
+    - target: {fileID: 862407346925633125, guid: 49f600d500e36d04b9c381d02547b6b5, type: 3}
+      propertyPath: m_Name
+      value: Soldiers_Runing 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1369196724947962227, guid: 49f600d500e36d04b9c381d02547b6b5, type: 3}
+      propertyPath: m_Name
+      value: Soldiers_Runing 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270151947449286422, guid: 49f600d500e36d04b9c381d02547b6b5, type: 3}
+      propertyPath: m_Name
+      value: Soldiers_Runing 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3306910771181486384, guid: 49f600d500e36d04b9c381d02547b6b5, type: 3}
       propertyPath: m_Name
       value: EnemiesOnPoints
@@ -5639,13 +5677,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4883348566819883939, guid: 49f600d500e36d04b9c381d02547b6b5, type: 3}
+      propertyPath: _nextWayPoint
+      value: 
+      objectReference: {fileID: 1585851484}
     - target: {fileID: 5596817956922763269, guid: 49f600d500e36d04b9c381d02547b6b5, type: 3}
       propertyPath: _isNextStageFighter
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5613326357040365536, guid: 49f600d500e36d04b9c381d02547b6b5, type: 3}
+      propertyPath: _nextWayPoint
+      value: 
+      objectReference: {fileID: 830599678}
+    - target: {fileID: 6399254804718242361, guid: 49f600d500e36d04b9c381d02547b6b5, type: 3}
+      propertyPath: m_Name
+      value: Soldiers_Runing 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399254805798065955, guid: 49f600d500e36d04b9c381d02547b6b5, type: 3}
+      propertyPath: m_Name
+      value: Soldiers_Runing 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6571486770614041781, guid: 49f600d500e36d04b9c381d02547b6b5, type: 3}
+      propertyPath: _nextWayPoint
+      value: 
+      objectReference: {fileID: 830599678}
     - target: {fileID: 7727595800936376694, guid: 49f600d500e36d04b9c381d02547b6b5, type: 3}
       propertyPath: _isNextStageFighter
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9053527529244376518, guid: 49f600d500e36d04b9c381d02547b6b5, type: 3}
+      propertyPath: _nextWayPoint
+      value: 
+      objectReference: {fileID: 1585851484}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49f600d500e36d04b9c381d02547b6b5, type: 3}
