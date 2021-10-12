@@ -20,7 +20,6 @@ public class PlayerBullet : MonoBehaviour
     {
         if (collision.TryGetComponent(out Enemy enemy))
         {
-            enemy.TakeDamage();
             _hasDestroy = true;
             _elapsedTime = 0;
             _bullet.SetActive(false);

@@ -5,15 +5,15 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Slider))]
 public class OverHeatBar : MonoBehaviour
 {
-    [SerializeField] private float _multiUp;
-    [SerializeField] private float _multiDown;
-
     private Slider _slider;
     private AttackState _attack;
     private Text _overHeatText;
 
     private bool _isReady;
     private float _value;
+
+    private const float _multiUp = 1.5f;
+    private const float _multiDown = 1f;
 
     public event UnityAction<bool> OverHeated;
 

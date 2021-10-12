@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private Material _dieMaterial;
     [SerializeField] private Color _targetColor;
+    [SerializeField] private ParticleSystem _emoji;
 
     private ParticleSystem[] _particalFX;
     private SkinnedMeshRenderer _renderer;
@@ -16,18 +17,26 @@ public class Enemy : MonoBehaviour
     private SkinnedMeshRenderer _meshRenderer;
     private Color _currentColor;
 
+    private float _hitPoints = 1f;
     private bool _hasInvisible = false;
     private bool _hasCurrentColor = true;
     private bool _isReady = false;
     private float _elapsedTime = 0;
 
     private const float _delay = 0.5f;
+    private const float _multiply = 0.2f;
 
     public event UnityAction Died;
 
-    public void TakeDamage()
+    public void TakeDamage(float damage)
     {
-        if (!_hasInvisible)
+        _hitPoints -= damage;
+        _currentColor.r = _hitPoints;
+        _currentColor.g = _hitPoints * _multiply;
+
+        _emoji.Play();
+
+        if (!_hasInvisible && _hitPoints <= 0)
         {
             Died?.Invoke();
             SetDieMaterial();
@@ -35,6 +44,8 @@ public class Enemy : MonoBehaviour
             PlayFX();
             _mover.enabled = true;
 
+            _hitPoints = 0;
+            _emoji.Stop();
             enabled = false;
         }
     }
