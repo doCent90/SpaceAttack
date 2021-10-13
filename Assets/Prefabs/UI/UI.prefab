@@ -2064,6 +2064,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3731686439787637256, guid: cf784e284ca818e428375a7f5f66afc5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1029.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731686439787637256, guid: cf784e284ca818e428375a7f5f66afc5, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 332.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731686439787637256, guid: cf784e284ca818e428375a7f5f66afc5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -474
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731686439787637256, guid: cf784e284ca818e428375a7f5f66afc5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -27
+      objectReference: {fileID: 0}
     - target: {fileID: 5412506538197614567, guid: cf784e284ca818e428375a7f5f66afc5, type: 3}
       propertyPath: _multiUp
       value: 1
@@ -2071,6 +2087,10 @@ PrefabInstance:
     - target: {fileID: 5412506538197614567, guid: cf784e284ca818e428375a7f5f66afc5, type: 3}
       propertyPath: _multiDown
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6320963800225684611, guid: cf784e284ca818e428375a7f5f66afc5, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 91
       objectReference: {fileID: 0}
     - target: {fileID: 6377713226405308636, guid: cf784e284ca818e428375a7f5f66afc5, type: 3}
       propertyPath: m_Name

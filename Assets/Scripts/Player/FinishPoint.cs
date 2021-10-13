@@ -4,8 +4,8 @@ using UnityEngine.UI;
 public class FinishPoint : MonoBehaviour
 {
     [SerializeField] private Text _winText;
-    [SerializeField] private EnemyGigant _lastEnemy;
-
+    
+    private EnemyGigant _lastEnemy;
     private PlayerMover _playerMover;
     private CameraMover _cameraMover;
     private PlayerFinish _celebration;

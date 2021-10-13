@@ -11,10 +11,10 @@ public class EnemyMover : MonoBehaviour
     private bool _isDead = false;
     private bool _hasSprinted = false;
 
-    private const int Chance = 1;
+    private const int Chance = 5;
     private const float Speed = 4f;
     private const float Duration = 0.8f;
-    private const float Distance = 26f;
+    private const float Distance = 12f;
 
     public event UnityAction Sprinted;
 
@@ -25,7 +25,7 @@ public class EnemyMover : MonoBehaviour
         if(Chance >= strangeNumber && !_isDead && !_isLastQueuEnemy && !_hasSprinted)
         {
             _enemy.SetTempInvisible(true);
-            var tweenMove = transform.DOMoveZ(Distance, Duration).OnComplete(SetEnemyInvis);
+            transform.DOMoveZ(transform.position.z + Distance, Duration).OnComplete(SetEnemyInvis);
             _hasSprinted = true;
             Sprinted?.Invoke();
         }
