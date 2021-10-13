@@ -7,13 +7,15 @@ public class EnemyMover : MonoBehaviour
 {
     [SerializeField] private bool _isLastQueuEnemy;
 
+    private WayPoint _enemiesPoint;
+    private Enemy[] _aliveEnemies;
     private Enemy _enemy;
     private bool _isDead = false;
     private bool _hasSprinted = false;
 
-    private const int Chance = 5;
+    private const int Chance = 90;
     private const float Speed = 4f;
-    private const float Duration = 0.8f;
+    private const float Duration = 2f;
     private const float Distance = 12f;
 
     public event UnityAction Sprinted;
@@ -39,11 +41,24 @@ public class EnemyMover : MonoBehaviour
     private void OnEnable()
     {
         _enemy = GetComponent<Enemy>();
+        _enemiesPoint = GetComponentInParent<WayPoint>();
+        _aliveEnemies = _enemiesPoint.GetComponentsInChildren<Enemy>();
+
         _enemy.Died += OnDied;
+
+        foreach (var enemy in _aliveEnemies)
+        {
+            enemy.Died += SprintForward;
+        }
     }
 
     private void OnDisable()
     {
+        foreach (var enemy in _aliveEnemies)
+        {
+            enemy.Died -= SprintForward;
+        }
+
         _enemy.Died -= OnDied;
     }
 

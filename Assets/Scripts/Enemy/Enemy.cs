@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -29,8 +28,6 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        _mover.SprintForward();
-
         if (!_hasInvisible)
         {
             _hitPoints = !_isGigant? (_hitPoints -= damage) : (_hitPoints -= damage / Multiply);
