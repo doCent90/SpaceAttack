@@ -17,8 +17,8 @@ public class AttackState : StatePlayer
     private bool _hasRightEdgeDone;
     private int _indexTarget = 1;
 
-    private const float RightRange = 210f;
-    private const float LeftRange = 145f;
+    private const float RightRange = 220f;
+    private const float LeftRange = 140f;
     private const float StartPositionCirlceGunPlace = 180f;
 
     public event UnityAction<bool> ReadyToAttacked;

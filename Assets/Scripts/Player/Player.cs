@@ -1,32 +1,32 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(BoxCollider))]
 [RequireComponent(typeof(PlayerMover))]
-[RequireComponent(typeof(TargetDieTransition))]
 [RequireComponent(typeof(AttackState))]
 [RequireComponent(typeof(StateMachinePlayer))]
+[RequireComponent(typeof(TargetDieTransition))]
 public class Player : MonoBehaviour
 {
-    private StateMachinePlayer _stateMachine;
-    private AttackState _attackState;
-    private TargetDieTransition _targetDie;
     private PlayerMover _mover;
     private GameOverField _gameOver;
+    private AttackState _attackState;
+    private TargetDieTransition _targetDie;
+    private StateMachinePlayer _stateMachine;
+
+    private int _countEnemies = 0;
 
     public event UnityAction Started;
 
     private void OnEnable()
     {
         Started?.Invoke();
-    }
 
-    private void Start()
-    {
-        _gameOver = FindObjectOfType<GameOverField>();
         _mover = GetComponent<PlayerMover>();
-        _stateMachine = GetComponent<StateMachinePlayer>();
         _attackState = GetComponent<AttackState>();
+        _gameOver = FindObjectOfType<GameOverField>();
         _targetDie = GetComponent<TargetDieTransition>();
+        _stateMachine = GetComponent<StateMachinePlayer>();
 
         _gameOver.Defeated += StopGame;
         _stateMachine.enabled = true;
@@ -34,7 +34,47 @@ public class Player : MonoBehaviour
 
     private void OnDisable()
     {
-        _gameOver.Defeated += StopGame;
+        _gameOver.Defeated -= StopGame;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.gameObject.name);
+            
+
+        if (collision.collider.TryGetComponent(out Enemy enemy))
+            _countEnemies++;
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.collider.TryGetComponent(out Enemy enemy))
+        {
+            _countEnemies--;
+            OnTargetsDie();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.TryGetComponent(out Enemy enemy))
+        {
+            _countEnemies++;
+        }
+    }
+
+    private void OnTriggerExit(Collider collision)
+    {
+        if(collision.TryGetComponent(out Enemy enemy))
+        {
+            _countEnemies--;
+            OnTargetsDie();
+        }
+    }
+    private void OnTargetsDie()
+    {
+        if (_countEnemies <= 0)
+            _targetDie.OnTargetDied();
     }
 
     private void StopGame()

@@ -5,15 +5,16 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Rigidbody))]
 public class EnemyMover : MonoBehaviour
 {
-    private Enemy _enemy;
-    private WayPoint _wayPoint;
-    private EnemiesOnPoint _enemiesOnPoint;
-    private bool _isDead = false;
+    [SerializeField] private bool _isLastQueuEnemy;
 
-    private const int Chance = 99;
+    private Enemy _enemy;
+    private bool _isDead = false;
+    private bool _hasSprinted = false;
+
+    private const int Chance = 1;
     private const float Speed = 4f;
-    private const float Duration = 1f;
-    private const float Distance = 24f;
+    private const float Duration = 0.8f;
+    private const float Distance = 26f;
 
     public event UnityAction Sprinted;
 
@@ -21,11 +22,11 @@ public class EnemyMover : MonoBehaviour
     {
         int strangeNumber = Random.Range(0, 100);
 
-        if(Chance >= strangeNumber && !_isDead && _wayPoint.NumberPoint < _enemiesOnPoint.CountWayPoint)
+        if(Chance >= strangeNumber && !_isDead && !_isLastQueuEnemy && !_hasSprinted)
         {
-            Debug.Log("Sprint");
             _enemy.SetTempInvisible(true);
             var tweenMove = transform.DOMoveZ(Distance, Duration).OnComplete(SetEnemyInvis);
+            _hasSprinted = true;
             Sprinted?.Invoke();
         }
     }
@@ -38,9 +39,6 @@ public class EnemyMover : MonoBehaviour
     private void OnEnable()
     {
         _enemy = GetComponent<Enemy>();
-        _wayPoint = GetComponentInParent<WayPoint>();
-        _enemiesOnPoint = GetComponentInParent<EnemiesOnPoint>();
-
         _enemy.Died += OnDied;
     }
 

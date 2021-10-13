@@ -174,7 +174,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fdcae8292c6ce2d41b675958ad4a7035, type: 2}
+  - {fileID: 2100000, guid: c4f64e8644a03c2478a2826bbc0e35a4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1808,9 +1808,10 @@ GameObject:
   - component: {fileID: 3546702063041742012}
   - component: {fileID: 1228147996592164860}
   - component: {fileID: 3708220797053431612}
-  - component: {fileID: 4231420704520199506}
+  - component: {fileID: 2733481612470500236}
+  - component: {fileID: 5303755160945898163}
   m_Layer: 3
-  m_Name: Soldiers_Runing 1
+  m_Name: Soldiers_Gigant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1825,7 +1826,7 @@ Transform:
   m_GameObject: {fileID: 8442623690604886364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 4199495090615996870}
   - {fileID: 5975669639585972848}
@@ -1880,10 +1881,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.64305174
-  m_Height: 3.884987
+  m_Radius: 0.3086159
+  m_Height: 1.9926172
   m_Direction: 1
-  m_Center: {x: -0.03542769, y: 1.6756147, z: 0}
+  m_Center: {x: -0.007445723, y: 0.7294299, z: 0}
 --- !u!114 &1228147996592164860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1909,10 +1910,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dieMaterial: {fileID: 2100000, guid: c8eb020621a62b941bd37ce4a7ae4914, type: 2}
-  _isGigant: 0
+  _isGigant: 1
   _emoji: {fileID: 3316967249714486086}
   _emojiLaugh: {fileID: 5975669639604311574}
---- !u!114 &4231420704520199506
+--- !u!114 &2733481612470500236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8442623690604886364}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a806badfacf9d547adaa458174467c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isLastQueuEnemy: 1
+--- !u!114 &5303755160945898163
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1921,10 +1935,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8442623690604886364}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a806badfacf9d547adaa458174467c2, type: 3}
+  m_Script: {fileID: 11500000, guid: c2d884667b3db6244a26a2e7505c0f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isLastQueuEnemy: 0
 --- !u!1 &8486088987069814495
 GameObject:
   m_ObjectHideFlags: 0
@@ -2327,14 +2340,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 426440, guid: 92cf35f623d72fc448f4d0661c9284f5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19803042, guid: 92cf35f623d72fc448f4d0661c9284f5, type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19817998, guid: 92cf35f623d72fc448f4d0661c9284f5, type: 3}
-      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19908198, guid: 92cf35f623d72fc448f4d0661c9284f5, type: 3}
