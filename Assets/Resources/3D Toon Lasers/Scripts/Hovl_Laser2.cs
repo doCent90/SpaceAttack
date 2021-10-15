@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.Serialization.Formatters;
-using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Hovl_Laser2 : MonoBehaviour
 {
@@ -14,55 +10,55 @@ public class Hovl_Laser2 : MonoBehaviour
 
     public float MaxLength;
 
-    private bool UpdateSaver = false;
-    private ParticleSystem laserPS;
-    private ParticleSystem[] Flash;
-    private ParticleSystem[] Hit;
-    private Material laserMat;
-    private int particleCount;
-    private ParticleSystem.Particle[] particles;
-    private Vector3[] particlesPositions;
-    private float dissovleTimer = 0;
-    private bool startDissovle = false;
+    private bool _updateSaver = false;
+    private ParticleSystem _laserParticalSysytem;
+    private ParticleSystem[] _flash;
+    private ParticleSystem[] _hit;
+    private Material _laserMat;
+    private int _particleCount;
+    private ParticleSystem.Particle[] _particles;
+    private Vector3[] _particlesPositions;
+    private float _dissovleTimer = 0;
+    private bool _isStartDissovle = false;
 
-    void Start()
+    private void Start()
     {
-        laserPS = GetComponent<ParticleSystem>();
-        laserMat = GetComponent<ParticleSystemRenderer>().material;
-        Flash = FlashEffect.GetComponentsInChildren<ParticleSystem>();
-        Hit = HitEffect.GetComponentsInChildren<ParticleSystem>();
-        laserMat.SetFloat("_Scale", laserScale);
+        _laserParticalSysytem = GetComponent<ParticleSystem>();
+        _laserMat = GetComponent<ParticleSystemRenderer>().material;
+        _flash = FlashEffect.GetComponentsInChildren<ParticleSystem>();
+        _hit = HitEffect.GetComponentsInChildren<ParticleSystem>();
+        _laserMat.SetFloat("_Scale", laserScale);
     }
 
-    void Update()
+    private void Update()
     {
-        if (laserPS != null && UpdateSaver == false)
+        if (_laserParticalSysytem != null && _updateSaver == false)
         {
             //Set start laser point
-            laserMat.SetVector("_StartPoint", transform.position);
+            _laserMat.SetVector("_StartPoint", transform.position);
             //Set end laser point
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, MaxLength))
             {
-                particleCount = Mathf.RoundToInt(hit.distance / (2 * laserScale));
-                if (particleCount < hit.distance / (2 * laserScale))
+                _particleCount = Mathf.RoundToInt(hit.distance / (2 * laserScale));
+                if (_particleCount < hit.distance / (2 * laserScale))
                 {
-                    particleCount += 1;
+                    _particleCount += 1;
                 }
-                particlesPositions = new Vector3[particleCount];
+                _particlesPositions = new Vector3[_particleCount];
                 AddParticles();
 
-                laserMat.SetFloat("_Distance", hit.distance);
-                laserMat.SetVector("_EndPoint", hit.point);
-                if (Hit != null)
+                _laserMat.SetFloat("_Distance", hit.distance);
+                _laserMat.SetVector("_EndPoint", hit.point);
+                if (_hit != null)
                 {
                     HitEffect.transform.position = hit.point + hit.normal * HitOffset;
                     HitEffect.transform.LookAt(hit.point);
-                    foreach (var AllHits in Hit)
+                    foreach (var AllHits in _hit)
                     {
                         if (!AllHits.isPlaying) AllHits.Play();
                     }
-                    foreach (var AllFlashes in Flash)
+                    foreach (var AllFlashes in _flash)
                     {
                         if (!AllFlashes.isPlaying) AllFlashes.Play();
                     }
@@ -70,23 +66,22 @@ public class Hovl_Laser2 : MonoBehaviour
             }
             else
             {
-                //End laser position if doesn't collide with object
                 var EndPos = transform.position + transform.forward * MaxLength;
                 var distance = Vector3.Distance(EndPos, transform.position);
-                particleCount = Mathf.RoundToInt(distance / (2 * laserScale));
-                if (particleCount < distance / (2 * laserScale))
+                _particleCount = Mathf.RoundToInt(distance / (2 * laserScale));
+                if (_particleCount < distance / (2 * laserScale))
                 {
-                    particleCount += 1;
+                    _particleCount += 1;
                 }
-                particlesPositions = new Vector3[particleCount];
+                _particlesPositions = new Vector3[_particleCount];
                 AddParticles();
 
-                laserMat.SetFloat("_Distance", distance);
-                laserMat.SetVector("_EndPoint", EndPos);
-                if (Hit != null)
+                _laserMat.SetFloat("_Distance", distance);
+                _laserMat.SetVector("_EndPoint", EndPos);
+                if (_hit != null)
                 {
                     HitEffect.transform.position = EndPos;
-                    foreach (var AllPs in Hit)
+                    foreach (var AllPs in _hit)
                     {
                         if (AllPs.isPlaying) AllPs.Stop();
                     }
@@ -94,49 +89,41 @@ public class Hovl_Laser2 : MonoBehaviour
             }          
         }
 
-        if (startDissovle)
+        if (_isStartDissovle)
         {
-            dissovleTimer += Time.deltaTime;
-            laserMat.SetFloat("_Dissolve", dissovleTimer*5);
+            _dissovleTimer += Time.deltaTime;
+            _laserMat.SetFloat("_Dissolve", _dissovleTimer*5);
         }
     }
 
-    void AddParticles()
+    private void AddParticles()
     {
-        //Old particles settings
-        /*
-        var normalDistance = particleCount;
-        var sh = LaserPS.shape;
-        sh.radius = normalDistance;
-        sh.position = new Vector3(0,0, normalDistance);
-        LaserPS.emission.SetBursts(new[] { new ParticleSystem.Burst(0f, particleCount + 1) });
-        */
+        _particles = new ParticleSystem.Particle[_particleCount];
 
-        particles = new ParticleSystem.Particle[particleCount];
-
-        for (int i = 0; i < particleCount; i++)
+        for (int i = 0; i < _particleCount; i++)
         {
-            particlesPositions[i] = new Vector3(0f, 0f, 0f) + new Vector3(0f, 0f, i * 2 * laserScale);
-            particles[i].position = particlesPositions[i];
-            particles[i].startSize3D = new Vector3(0.001f, 0.001f, 2 * laserScale);
-            particles[i].startColor = laserColor;
+            _particlesPositions[i] = new Vector3(0f, 0f, 0f) + new Vector3(0f, 0f, i * 2 * laserScale);
+            _particles[i].position = _particlesPositions[i];
+            _particles[i].startSize3D = new Vector3(0.001f, 0.001f, 2 * laserScale);
+            _particles[i].startColor = laserColor;
         }
-        laserPS.SetParticles(particles, particles.Length);
+        _laserParticalSysytem.SetParticles(_particles, _particles.Length);
     }
 
     public void DisablePrepare()
     {
         transform.parent = null;
-        dissovleTimer = 0;
-        startDissovle = true;
-        UpdateSaver = true;
-        if (Flash != null && Hit != null)
+        _dissovleTimer = 0;
+        _isStartDissovle = true;
+        _updateSaver = true;
+
+        if (_flash != null && _hit != null)
         {
-            foreach (var AllHits in Hit)
+            foreach (var AllHits in _hit)
             {
                 if (AllHits.isPlaying) AllHits.Stop();
             }
-            foreach (var AllFlashes in Flash)
+            foreach (var AllFlashes in _flash)
             {
                 if (AllFlashes.isPlaying) AllFlashes.Stop();
             }

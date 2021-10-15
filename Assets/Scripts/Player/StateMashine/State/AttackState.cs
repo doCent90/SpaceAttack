@@ -1,14 +1,19 @@
 using UnityEngine;
 using UnityEngine.Events;
+using System.Linq;
+using System.Collections.Generic;
 
 public class AttackState : StatePlayer
 {
     [Header("Laser")]
-    [SerializeField] private GameObject _laser;
+    [SerializeField] private int _laserNumber;
+    [SerializeField] private GameObject[] _laser;
+    [SerializeField] private GameObject _rayCast;
     [SerializeField] private GameObject _aim;
     [SerializeField] private ParticleSystem _shootFX;
     [Header("Settings of Shot")]
     [SerializeField] private float _speedRotate;
+    [SerializeField] private Transform _shootPosition;
 
     private CirlceGunPlace _cirlceGunPlace;
     private GunPlace _gunPlace;
@@ -17,6 +22,10 @@ public class AttackState : StatePlayer
     private bool _hasRightEdgeDone;
     private int _indexTarget = 1;
 
+    private GameObject _instance;
+    private Hovl_Laser2 _laserPrefab;
+
+    private const float Delay = 0.2f;
     private const float RightRange = 220f;
     private const float LeftRange = 140f;
     private const float StartPositionCirlceGunPlace = 180f;
@@ -35,7 +44,7 @@ public class AttackState : StatePlayer
         ReadyToAttacked?.Invoke(true);
         SetStartAngle();
 
-        _laser.SetActive(false);
+        _rayCast.SetActive(false);
         _hasRightEdgeDone = true;
         _aim.SetActive(true);
     }
@@ -47,7 +56,7 @@ public class AttackState : StatePlayer
         ReadyToAttacked?.Invoke(false);
         Fired?.Invoke(false);
 
-        _laser.SetActive(false);
+        _rayCast.SetActive(false);
         _aim.SetActive(false);
     }
 
@@ -102,18 +111,43 @@ public class AttackState : StatePlayer
 
         if (isShooting)
         {
+            ActivatekLaser(isShooting);
             Shoted?.Invoke();
             _shootFX.Play();
-            _laser.SetActive(true);
+            _rayCast.SetActive(true);
         }
         else
         {
-            _laser.SetActive(false);
+            ActivatekLaser(isShooting);
+            _rayCast.SetActive(false);
         }
     }
 
     private void ResetAttake(bool isOverHeated)
     {
         _isOverHeated = isOverHeated;
+    }
+
+    private void ActivatekLaser(bool isReady)
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Destroy(_instance);
+            _instance = Instantiate(_laser[_laserNumber], _rayCast.transform.position, _rayCast.transform.rotation);
+
+            _instance.transform.parent = _shootPosition;
+            _laserPrefab = _instance.GetComponent<Hovl_Laser2>();
+        }
+
+        if (!isReady)
+        {
+            if (_laserPrefab)
+                _laserPrefab.DisablePrepare();
+
+            if(_instance != null)
+                _instance.transform.parent = _shootPosition;
+
+            Destroy(_instance, Delay);
+        }
     }
 }

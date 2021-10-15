@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class StartGame : MonoBehaviour
@@ -10,6 +9,7 @@ public class StartGame : MonoBehaviour
 
     private int _countStartSessions = 0;
 
+    private const string Key = "b2757e20bee8ecd447b0ed8c368abd50";
     private const string CountSessions = "CountSessions";
     private const string CountDaysGame = "days_in_game";
     private const string GameStart = "game_start";
@@ -43,7 +43,7 @@ public class StartGame : MonoBehaviour
         amplitude.setServerUrl("https://api2.amplitude.com");
         amplitude.logging = true;
         amplitude.trackSessionEvents(true);
-        amplitude.init("????");
+        amplitude.init(Key);
     }
 
     private void SetCountSessions()
