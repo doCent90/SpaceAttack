@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4512409995666456}
   - component: {fileID: 198459421899160470}
   - component: {fileID: 199224286300786458}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SideTrails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4847,7 +4847,7 @@ GameObject:
   - component: {fileID: 4823784362508434}
   - component: {fileID: 198196698541645156}
   - component: {fileID: 199073900976480374}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9665,7 +9665,7 @@ GameObject:
   - component: {fileID: 4177768084428892}
   - component: {fileID: 198082030315076446}
   - component: {fileID: 199824366510561326}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SparksCore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14492,7 +14492,7 @@ GameObject:
   - component: {fileID: 4963525944596658}
   - component: {fileID: 198820507866749702}
   - component: {fileID: 199931893438267192}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19319,7 +19319,7 @@ GameObject:
   - component: {fileID: 4436512035279380}
   - component: {fileID: 198145140961307006}
   - component: {fileID: 199199328813005326}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FireHit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24154,7 +24154,7 @@ GameObject:
   - component: {fileID: 4075784405022536}
   - component: {fileID: 198905009102382718}
   - component: {fileID: 199720607783542408}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DarkSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28981,7 +28981,7 @@ GameObject:
   - component: {fileID: 4651870029085300}
   - component: {fileID: 198334802918853888}
   - component: {fileID: 199067955140267764}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShockWave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33799,7 +33799,7 @@ GameObject:
   - component: {fileID: 4518109052284050}
   - component: {fileID: 198651364287432736}
   - component: {fileID: 199333981979171616}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38635,7 +38635,7 @@ GameObject:
   - component: {fileID: 4949826154491468}
   - component: {fileID: 198400396327752246}
   - component: {fileID: 199316070988744954}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43453,7 +43453,7 @@ GameObject:
   - component: {fileID: 4957122714549248}
   - component: {fileID: 198260895008181816}
   - component: {fileID: 199990710780481672}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FireFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48284,7 +48284,7 @@ GameObject:
   - component: {fileID: 114491215411067744}
   - component: {fileID: 198357081524885744}
   - component: {fileID: 199146603387529954}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Laser Toon Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53180,7 +53180,7 @@ GameObject:
   - component: {fileID: 4284996862678830}
   - component: {fileID: 198973585797286584}
   - component: {fileID: 199114580260315272}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57998,7 +57998,7 @@ GameObject:
   - component: {fileID: 4200354331294866}
   - component: {fileID: 198214751438487260}
   - component: {fileID: 199500280406684096}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62825,7 +62825,7 @@ GameObject:
   - component: {fileID: 4203127965216640}
   - component: {fileID: 198545306942247458}
   - component: {fileID: 199855898880571466}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EndlDesbis
   m_TagString: Untagged
   m_Icon: {fileID: 0}

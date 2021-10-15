@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4731823123332746}
   - component: {fileID: 198909592550432482}
   - component: {fileID: 199251414053512618}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4856,7 +4856,7 @@ GameObject:
   - component: {fileID: 4408807395725900}
   - component: {fileID: 198166066805440894}
   - component: {fileID: 199259519245223966}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShockWave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9674,7 +9674,7 @@ GameObject:
   - component: {fileID: 4823191675375360}
   - component: {fileID: 198261635687508174}
   - component: {fileID: 199658404949949342}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShockWave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14550,7 +14550,7 @@ GameObject:
   - component: {fileID: 4345864113921206}
   - component: {fileID: 198708438577041974}
   - component: {fileID: 199673139279120128}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Desbis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19377,7 +19377,7 @@ GameObject:
   - component: {fileID: 4598234875725784}
   - component: {fileID: 198865143475445610}
   - component: {fileID: 199358943810742396}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24195,7 +24195,7 @@ GameObject:
   - component: {fileID: 4793073486791330}
   - component: {fileID: 198253346194942976}
   - component: {fileID: 199776016550421076}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SparksLong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29022,7 +29022,7 @@ GameObject:
   - component: {fileID: 4972209122070970}
   - component: {fileID: 198229884963426274}
   - component: {fileID: 199119353477727550}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33867,7 +33867,7 @@ GameObject:
   - component: {fileID: 4223355398257954}
   - component: {fileID: 198671008919356390}
   - component: {fileID: 199283779320243826}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38685,7 +38685,7 @@ GameObject:
   - component: {fileID: 4100832827945508}
   - component: {fileID: 198745180120199932}
   - component: {fileID: 199059304664716110}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MagicHit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43528,7 +43528,7 @@ GameObject:
   - component: {fileID: 114708084083737382}
   - component: {fileID: 198268955703335904}
   - component: {fileID: 199000637204589494}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Laser Toon Magic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48424,7 +48424,7 @@ GameObject:
   - component: {fileID: 4653664378909238}
   - component: {fileID: 198162628538899396}
   - component: {fileID: 199933034012837886}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53242,7 +53242,7 @@ GameObject:
   - component: {fileID: 4305260442677382}
   - component: {fileID: 198675862530168178}
   - component: {fileID: 199883803647192788}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MagicFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58082,7 +58082,7 @@ GameObject:
   - component: {fileID: 4549496106511468}
   - component: {fileID: 198280338472486206}
   - component: {fileID: 199633503315661118}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SparksLong
   m_TagString: Untagged
   m_Icon: {fileID: 0}

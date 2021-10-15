@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4654397900035982}
   - component: {fileID: 198813677647329438}
   - component: {fileID: 199756147809171078}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Electro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4951,7 +4951,7 @@ GameObject:
   - component: {fileID: 4641459286502048}
   - component: {fileID: 198829415164116130}
   - component: {fileID: 199258777303054698}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9827,7 +9827,7 @@ GameObject:
   - component: {fileID: 4506012322604788}
   - component: {fileID: 198033153047532342}
   - component: {fileID: 199657500995370946}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14703,7 +14703,7 @@ GameObject:
   - component: {fileID: 4274725189757130}
   - component: {fileID: 198050608920400406}
   - component: {fileID: 199222842050086686}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShockWave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19579,7 +19579,7 @@ GameObject:
   - component: {fileID: 4020316385095098}
   - component: {fileID: 198929500895548344}
   - component: {fileID: 199586422930145680}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Lightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24455,7 +24455,7 @@ GameObject:
   - component: {fileID: 4194857652531388}
   - component: {fileID: 198041677944746458}
   - component: {fileID: 199859713996147664}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Desbis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29340,7 +29340,7 @@ GameObject:
   - component: {fileID: 4739663921173916}
   - component: {fileID: 198609836830589748}
   - component: {fileID: 199339403401304352}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34222,7 +34222,7 @@ GameObject:
   - component: {fileID: 4027555704568316}
   - component: {fileID: 198858970194063178}
   - component: {fileID: 199316673205945818}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SparksLong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39107,7 +39107,7 @@ GameObject:
   - component: {fileID: 4867059613648546}
   - component: {fileID: 198096736352096904}
   - component: {fileID: 199027190246045944}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flashes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44001,7 +44001,7 @@ GameObject:
   - component: {fileID: 4028420294282934}
   - component: {fileID: 198557902962249522}
   - component: {fileID: 199339618230831958}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SparksLong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48887,7 +48887,7 @@ GameObject:
   - component: {fileID: 114657702856252536}
   - component: {fileID: 198788981587489396}
   - component: {fileID: 199021097216948548}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Laser Toon Blaster 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53783,7 +53783,7 @@ GameObject:
   - component: {fileID: 4268694001850618}
   - component: {fileID: 198365014001731118}
   - component: {fileID: 199864134225945396}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Lightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58659,7 +58659,7 @@ GameObject:
   - component: {fileID: 4134320612879406}
   - component: {fileID: 198667542325348754}
   - component: {fileID: 199052298654590516}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}

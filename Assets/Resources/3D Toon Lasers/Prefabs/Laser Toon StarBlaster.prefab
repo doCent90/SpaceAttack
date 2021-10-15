@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4577318144187764}
   - component: {fileID: 198075416093319286}
   - component: {fileID: 199959771302886500}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4896,7 +4896,7 @@ GameObject:
   - component: {fileID: 4110957878506618}
   - component: {fileID: 198855281440098016}
   - component: {fileID: 199871658808470052}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9777,7 +9777,7 @@ GameObject:
   - component: {fileID: 4227384294288378}
   - component: {fileID: 198162807703780236}
   - component: {fileID: 199700103583663704}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Trails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14655,7 +14655,7 @@ GameObject:
   - component: {fileID: 114873725429533320}
   - component: {fileID: 198868283709770526}
   - component: {fileID: 199538214016055708}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Laser Toon StarBlaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19551,7 +19551,7 @@ GameObject:
   - component: {fileID: 4486695566581536}
   - component: {fileID: 198001024508831604}
   - component: {fileID: 199456462300016986}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24427,7 +24427,7 @@ GameObject:
   - component: {fileID: 4877539664154636}
   - component: {fileID: 198723660234368248}
   - component: {fileID: 199589986068494068}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SparksCore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29312,7 +29312,7 @@ GameObject:
   - component: {fileID: 4555837441939920}
   - component: {fileID: 198345907561311126}
   - component: {fileID: 199445149435280372}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34198,7 +34198,7 @@ GameObject:
   - component: {fileID: 4431618650704592}
   - component: {fileID: 198392096877812646}
   - component: {fileID: 199068337059074382}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Darkness
   m_TagString: Untagged
   m_Icon: {fileID: 0}
