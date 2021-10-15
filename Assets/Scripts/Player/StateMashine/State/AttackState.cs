@@ -1,7 +1,5 @@
 using UnityEngine;
 using UnityEngine.Events;
-using System.Linq;
-using System.Collections.Generic;
 
 public class AttackState : StatePlayer
 {
@@ -18,6 +16,7 @@ public class AttackState : StatePlayer
     private CirlceGunPlace _cirlceGunPlace;
     private GunPlace _gunPlace;
     private OverHeatBar _overHeat;
+
     private bool _isOverHeated = false;
     private bool _hasRightEdgeDone;
     private int _indexTarget = 1;
@@ -25,7 +24,7 @@ public class AttackState : StatePlayer
     private GameObject _instance;
     private Hovl_Laser2 _laserPrefab;
 
-    private const float Delay = 0.2f;
+    private const float Delay = 0.3f;
     private const float RightRange = 220f;
     private const float LeftRange = 140f;
     private const float StartPositionCirlceGunPlace = 180f;
@@ -52,6 +51,7 @@ public class AttackState : StatePlayer
     private void OnDisable()
     {
         _overHeat.OverHeated -= ResetAttake;
+        DeactivateLaser(false);
 
         ReadyToAttacked?.Invoke(false);
         Fired?.Invoke(false);
@@ -71,10 +71,15 @@ public class AttackState : StatePlayer
             RotateGunRihgt();
         }
 
-        if (Input.GetMouseButton(0) && !_isOverHeated)
+        if (Input.GetMouseButtonDown(0) && !_isOverHeated)
+        {
             Attack(true);
-        else
+        }
+
+        if(_isOverHeated)
+        {
             Attack(false);
+        }
     }
 
     private void SetStartAngle()
@@ -111,14 +116,14 @@ public class AttackState : StatePlayer
 
         if (isShooting)
         {
-            ActivatekLaser(isShooting);
+            ActivatekLaser();
             Shoted?.Invoke();
             _shootFX.Play();
             _rayCast.SetActive(true);
         }
         else
         {
-            ActivatekLaser(isShooting);
+            DeactivateLaser(isShooting);
             _rayCast.SetActive(false);
         }
     }
@@ -128,7 +133,7 @@ public class AttackState : StatePlayer
         _isOverHeated = isOverHeated;
     }
 
-    private void ActivatekLaser(bool isReady)
+    private void ActivatekLaser()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -138,13 +143,16 @@ public class AttackState : StatePlayer
             _instance.transform.parent = _shootPosition;
             _laserPrefab = _instance.GetComponent<Hovl_Laser2>();
         }
+    }
 
+    private void DeactivateLaser(bool isReady)
+    {
         if (!isReady)
         {
             if (_laserPrefab)
                 _laserPrefab.DisablePrepare();
 
-            if(_instance != null)
+            if (_instance != null)
                 _instance.transform.parent = _shootPosition;
 
             Destroy(_instance, Delay);
