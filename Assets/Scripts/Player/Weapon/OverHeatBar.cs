@@ -16,6 +16,7 @@ public class OverHeatBar : MonoBehaviour
     private const float _multiDown = 1f;
 
     public event UnityAction<bool> OverHeated;
+    public event UnityAction<float> ValueChanged;
 
     private void OnEnable()
     {
@@ -54,6 +55,7 @@ public class OverHeatBar : MonoBehaviour
                 _value -= Time.deltaTime * _multiDown;
         }
 
+        ValueChanged?.Invoke(_value);
         _slider.value = _value;
     }
 

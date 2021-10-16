@@ -34,9 +34,8 @@ public class Hovl_Laser2 : MonoBehaviour
     {
         if (_laserParticalSysytem != null && _updateSaver == false)
         {
-            //Set start laser point
             _laserMat.SetVector("_StartPoint", transform.position);
-            //Set end laser point
+
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, MaxLength))
             {
