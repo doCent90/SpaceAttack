@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Image))]
 public class HotBarFillArea : MonoBehaviour
 {
     private Image _image;

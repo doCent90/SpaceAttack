@@ -30,6 +30,8 @@ public class ButtonsUI : MonoBehaviour
     private const string TimeSpent = "time_spent_lvl_complete";
     private const string Restart = "restart";
 
+    public bool IsPanelOpen { get; private set; } = false;
+
     public event UnityAction Clicked;
 
     public void StartCurrentLevel()
@@ -61,6 +63,8 @@ public class ButtonsUI : MonoBehaviour
 
     public void OpenSettings()
     {
+        IsPanelOpen = true;
+
         Time.timeScale = 0;
         _openOptions.gameObject.SetActive(false);
         _closeOptions.gameObject.SetActive(true);
@@ -70,6 +74,8 @@ public class ButtonsUI : MonoBehaviour
 
     public void CloseSettings()
     {
+        IsPanelOpen = false;
+        
         Time.timeScale = 1;
         _openOptions.gameObject.SetActive(true);
         _closeOptions.gameObject.SetActive(false);

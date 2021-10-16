@@ -23,6 +23,7 @@ public class AttackState : StatePlayer
 
     private GameObject _instance;
     private Hovl_Laser2 _laserPrefab;
+    private ButtonsUI _panelUI;
 
     private const float Delay = 0.3f;
     private const float RightRange = 220f;
@@ -35,9 +36,11 @@ public class AttackState : StatePlayer
 
     private void OnEnable()
     {
+        _panelUI = FindObjectOfType<ButtonsUI>();
         _overHeat = FindObjectOfType<OverHeatBar>();
         _gunPlace = GetComponentInChildren<GunPlace>();
         _cirlceGunPlace = GetComponentInChildren<CirlceGunPlace>();
+
         _overHeat.OverHeated += ResetAttake;
 
         ReadyToAttacked?.Invoke(true);
@@ -71,7 +74,7 @@ public class AttackState : StatePlayer
             RotateGunRihgt();
         }
 
-        if (Input.GetMouseButtonDown(0) && !_isOverHeated)
+        if (Input.GetMouseButtonDown(0) && !_isOverHeated && !_panelUI.IsPanelOpen)
         {
             Attack(true);
         }

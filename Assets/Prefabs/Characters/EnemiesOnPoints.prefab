@@ -342,7 +342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8442623690604717372, guid: a80ac2edad0a3654c9f94804dc779d66, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.22
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 8442623690604717372, guid: a80ac2edad0a3654c9f94804dc779d66, type: 3}
       propertyPath: m_LocalPosition.y
@@ -408,7 +408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8442623690604717372, guid: ca2c859963684aa43b84e8d6abb55aec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.17
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 8442623690604717372, guid: ca2c859963684aa43b84e8d6abb55aec, type: 3}
       propertyPath: m_LocalPosition.y
@@ -474,7 +474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8442623690604717372, guid: ca2c859963684aa43b84e8d6abb55aec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.63
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8442623690604717372, guid: ca2c859963684aa43b84e8d6abb55aec, type: 3}
       propertyPath: m_LocalPosition.y
@@ -544,7 +544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8442623690604717372, guid: ca2c859963684aa43b84e8d6abb55aec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.91
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8442623690604717372, guid: ca2c859963684aa43b84e8d6abb55aec, type: 3}
       propertyPath: m_LocalPosition.y
@@ -614,7 +614,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8442623690604717372, guid: ca2c859963684aa43b84e8d6abb55aec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.48
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 8442623690604717372, guid: ca2c859963684aa43b84e8d6abb55aec, type: 3}
       propertyPath: m_LocalPosition.y

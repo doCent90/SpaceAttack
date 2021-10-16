@@ -11,25 +11,59 @@ public class EnemyMover : MonoBehaviour
     private Enemy[] _aliveEnemies;
     private Enemy _enemy;
     private bool _isDead = false;
-    private bool _hasSprinted = false;
+    private bool _hasSprintedForward = false;
+    private bool _hasSprintedSide = false;
 
-    private const int Chance = 90;
+    private const int Chance = 99;
     private const float Speed = 4f;
-    private const float Duration = 2f;
-    private const float Distance = 12f;
+    private const float DurationZ = 2f;
+    private const float DurationX = 0.8f;
+    private const float DistanceZ = 12f;
+    private const float DistanceX = 3f;
 
-    public event UnityAction Sprinted;
-
-    public void SprintForward()
+    private void RandomMove()
     {
-        int strangeNumber = Random.Range(0, 100);
+        int randomNumber = Random.Range(0, 100);
+        int typeRandomMove = Random.Range(0, 2);
 
-        if(Chance >= strangeNumber && !_isDead && !_isLastQueuEnemy && !_hasSprinted)
+        if (typeRandomMove == 0)
+            SprintForward(randomNumber);
+        else
+            SprintSide(randomNumber);
+
+
+    }
+
+    private void SprintForward(int randomNumber)
+    {
+        if(Chance >= randomNumber && !_isDead && !_isLastQueuEnemy && !_hasSprintedForward)
+        {
+            var currentPosition = transform.position;
+
+            _enemy.SetTempInvisible(true);
+            transform.DOMoveZ(currentPosition.z + DistanceZ, DurationZ).OnComplete(SetEnemyInvis);
+
+            _hasSprintedForward = true;
+            _hasSprintedSide = true;
+        }
+    }
+
+    private void SprintSide(int randomNumber)
+    {
+        var currentPosition = transform.position;
+        float direction = DistanceX;
+
+        if (Chance >= randomNumber && !_isDead && !_hasSprintedSide)
         {
             _enemy.SetTempInvisible(true);
-            transform.DOMoveZ(transform.position.z + Distance, Duration).OnComplete(SetEnemyInvis);
-            _hasSprinted = true;
-            Sprinted?.Invoke();
+
+            if (currentPosition.x < 0)
+                direction *= -1;
+
+            transform.DOMoveX(currentPosition.x - direction, DurationX).OnComplete(SetEnemyInvis);
+
+            _hasSprintedSide = true;
+            _hasSprintedForward = true;
         }
     }
 
@@ -48,7 +82,7 @@ public class EnemyMover : MonoBehaviour
 
         foreach (var enemy in _aliveEnemies)
         {
-            enemy.Died += SprintForward;
+            enemy.Died += RandomMove;
         }
     }
 
@@ -56,7 +90,7 @@ public class EnemyMover : MonoBehaviour
     {
         foreach (var enemy in _aliveEnemies)
         {
-            enemy.Died -= SprintForward;
+            enemy.Died -= RandomMove;
         }
 
         _enemy.Died -= OnDied;

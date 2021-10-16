@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ParticalCollisions : MonoBehaviour
 {
-    private float _damage = 0.05f;
+    private readonly float _damage = 0.05f;
 
     private void OnParticleCollision(GameObject collision)
     {
