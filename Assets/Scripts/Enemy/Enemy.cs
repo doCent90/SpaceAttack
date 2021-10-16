@@ -12,7 +12,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private ParticleSystem _emojiLaugh;
 
     private EnemyMover _mover;
-    private Color _currentColor;
+    private Vector4 _currentColor;
+    private Vector4 _targetColor = Color.gray;
     private ParticleSystem[] _particalFX;
     private SkinnedMeshRenderer _renderer;
     private EnemyParticals _enemyParticals;
@@ -64,9 +65,7 @@ public class Enemy : MonoBehaviour
 
     private void ChangeColor()
     {
-        _currentColor.r = _hitPoints;
-        _meshRenderer.material.color = _currentColor;
-
+        _meshRenderer.material.color = Vector4.Lerp(_targetColor, _currentColor, _hitPoints);
         _emoji.Play();
     }
 
