@@ -8,6 +8,10 @@ public class ButtonsUI : MonoBehaviour
     [SerializeField] private Button _buttonStart;
     [SerializeField] private Button _buttonRetry;
     [SerializeField] private Button _buttonContinue;
+    [Header("Shop")]
+    [SerializeField] private GameObject _shop;
+    [SerializeField] private Button _openShop;
+    [SerializeField] private Button _closeShop;
     [Header("Settings")]
     [SerializeField] private GameObject _panelOptions;
     [SerializeField] private Button _openOptions;
@@ -64,8 +68,9 @@ public class ButtonsUI : MonoBehaviour
     public void OpenSettings()
     {
         IsPanelOpen = true;
-
         Time.timeScale = 0;
+
+        _openShop.gameObject.SetActive(false);
         _openOptions.gameObject.SetActive(false);
         _closeOptions.gameObject.SetActive(true);
         _panelOptions.SetActive(true);
@@ -75,8 +80,9 @@ public class ButtonsUI : MonoBehaviour
     public void CloseSettings()
     {
         IsPanelOpen = false;
-        
         Time.timeScale = 1;
+
+        _openShop.gameObject.SetActive(true);
         _openOptions.gameObject.SetActive(true);
         _closeOptions.gameObject.SetActive(false);
         _panelOptions.SetActive(false);
@@ -99,6 +105,33 @@ public class ButtonsUI : MonoBehaviour
         _onSoundButton.gameObject.SetActive(true);
         _offSoundButton.gameObject.SetActive(false);
         Clicked?.Invoke();
+    }
+
+    public void OpenShop()
+    {
+        IsPanelOpen = true;
+        Time.timeScale = 0;
+
+        _shop.SetActive(true);
+        _openOptions.gameObject.SetActive(false);
+        _closeShop.gameObject.SetActive(true);
+        _openShop.gameObject.SetActive(false);
+    }
+
+    public void CloseShop()
+    {
+        IsPanelOpen = false;
+        Time.timeScale = 1;
+
+        _shop.SetActive(false);
+        _openOptions.gameObject.SetActive(true);
+        _closeShop.gameObject.SetActive(false);
+        _openShop.gameObject.SetActive(true);
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
     }
 
     private void OnEnable()
