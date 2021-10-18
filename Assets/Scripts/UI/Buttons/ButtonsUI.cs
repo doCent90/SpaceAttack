@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 
 public class ButtonsUI : MonoBehaviour
-{
+{    
     [Header("Buttons")]
     [SerializeField] private Button _buttonStart;
     [SerializeField] private Button _buttonRetry;
@@ -20,6 +20,7 @@ public class ButtonsUI : MonoBehaviour
     [SerializeField] private Button _onSoundButton;
     [SerializeField] private Button _offSoundButton;
 
+    private CurrentCoinsViewer _coinsViewer;
     private SoundsFXSettings _soundMaster;
     private GameLevelsLoader _loadLevel;
     private GameOverField _gameOver;
@@ -70,10 +71,11 @@ public class ButtonsUI : MonoBehaviour
         IsPanelOpen = true;
         Time.timeScale = 0;
 
+        _panelOptions.SetActive(true);
         _openShop.gameObject.SetActive(false);
+        _coinsViewer.gameObject.SetActive(false);
         _openOptions.gameObject.SetActive(false);
         _closeOptions.gameObject.SetActive(true);
-        _panelOptions.SetActive(true);
         Clicked?.Invoke();
     }
 
@@ -82,10 +84,11 @@ public class ButtonsUI : MonoBehaviour
         IsPanelOpen = false;
         Time.timeScale = 1;
 
+        _panelOptions.SetActive(false);
         _openShop.gameObject.SetActive(true);
         _openOptions.gameObject.SetActive(true);
+        _coinsViewer.gameObject.SetActive(true);
         _closeOptions.gameObject.SetActive(false);
-        _panelOptions.SetActive(false);
         Clicked?.Invoke();
     }
 
@@ -113,9 +116,10 @@ public class ButtonsUI : MonoBehaviour
         Time.timeScale = 0;
 
         _shop.SetActive(true);
-        _openOptions.gameObject.SetActive(false);
-        _closeShop.gameObject.SetActive(true);
         _openShop.gameObject.SetActive(false);
+        _closeShop.gameObject.SetActive(true);
+        _coinsViewer.gameObject.SetActive(false);
+        _openOptions.gameObject.SetActive(false);
     }
 
     public void CloseShop()
@@ -124,9 +128,10 @@ public class ButtonsUI : MonoBehaviour
         Time.timeScale = 1;
 
         _shop.SetActive(false);
-        _openOptions.gameObject.SetActive(true);
-        _closeShop.gameObject.SetActive(false);
         _openShop.gameObject.SetActive(true);
+        _closeShop.gameObject.SetActive(false);
+        _coinsViewer.gameObject.SetActive(true);
+        _openOptions.gameObject.SetActive(true);
     }
 
     public void Exit()
@@ -142,6 +147,7 @@ public class ButtonsUI : MonoBehaviour
         _loadLevel = FindObjectOfType<GameLevelsLoader>();
         _playerMover = _player.GetComponent<PlayerMover>();
         _soundMaster = FindObjectOfType<SoundsFXSettings>();
+        _coinsViewer = FindObjectOfType<CurrentCoinsViewer>();
 
         _playerMover.LastPointCompleted += ShowContinueButton;
         _gameOver.Defeated += ShowRetryButton;
