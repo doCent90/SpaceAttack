@@ -4,12 +4,11 @@ public class CameraMover : MonoBehaviour
 {
     private Player _player;
 
-    private const float Distance = 0.5f;
+    private const float Distance = 4f;
 
     private void OnEnable()
     {
         _player = FindObjectOfType<Player>();
-
     }
 
     private void Update()

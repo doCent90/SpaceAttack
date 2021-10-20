@@ -63,12 +63,6 @@ public class GameLevelsLoader : MonoBehaviour
             case 1:
                 LVL1.Load();
                 break;
-            case 2:
-                LVL2.Load();
-                break;
-            case 3:
-                LVL3.Load();
-                break;
         }
     }
 

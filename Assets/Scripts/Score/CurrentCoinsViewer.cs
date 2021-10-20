@@ -8,7 +8,7 @@ public class CurrentCoinsViewer : MonoBehaviour
 
     private int _currentCoins = 0;
 
-    private const int Multiply = 100;
+    private const int Multiply = 10;
     private const string Coins = "Coins";
 
     private void OnEnable()
