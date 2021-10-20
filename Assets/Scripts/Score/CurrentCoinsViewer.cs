@@ -34,7 +34,7 @@ public class CurrentCoinsViewer : MonoBehaviour
 
     private void Show()
     {
-        _coinsTxt.text = $"Coins: {_currentCoins}";
+        _coinsTxt.text = _currentCoins.ToString();
     }
 
     private void SafeScore()
