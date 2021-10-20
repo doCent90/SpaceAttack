@@ -1,12 +1,9 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
 
 public class GameOverField : MonoBehaviour
 {
-    [SerializeField] private Text _text;
-
+    private YouLose _loseText;
     private BackGroundMover _groundMover;
     private GameLevelsLoader _gameLevelsLoader;
 
@@ -20,9 +17,11 @@ public class GameOverField : MonoBehaviour
 
     private void OnEnable()
     {
+        _loseText = FindObjectOfType<YouLose>();
         _gameLevelsLoader = FindObjectOfType<GameLevelsLoader>();
         _groundMover = GetComponentInParent<BackGroundMover>();
-        _text.enabled = false;
+
+        _loseText.gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -37,7 +36,7 @@ public class GameOverField : MonoBehaviour
 
             Defeated?.Invoke();
             _groundMover.enabled = false;
-            _text.enabled = true;
+            _loseText.gameObject.SetActive(true);
 
             _isLevelDone = true;
 
