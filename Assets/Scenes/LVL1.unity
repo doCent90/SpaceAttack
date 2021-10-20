@@ -616,6 +616,14 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4293059298
       objectReference: {fileID: 0}
+    - target: {fileID: 3096517201320978696, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 62.399994
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096517201320978696, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -17.799988
+      objectReference: {fileID: 0}
     - target: {fileID: 3682617119485479547, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
       propertyPath: m_SizeDelta.x
       value: 904.6
@@ -635,6 +643,10 @@ PrefabInstance:
     - target: {fileID: 3682617119485479547, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -23
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677201571328779025, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6938905631064532006, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
       propertyPath: m_SizeDelta.x
@@ -806,28 +818,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
---- !u!114 &2043922770 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4522209668508205902, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
-  m_PrefabInstance: {fileID: 2043922769}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2043922771 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5393981953126116131, guid: 83e2bb5de04f31348919cda15dcfadac, type: 3}
-  m_PrefabInstance: {fileID: 2043922769}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2094677678 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5891403771423600978, guid: 68620ec8bd4f20d4aaebd3574a95f75a, type: 3}
@@ -980,7 +970,7 @@ PrefabInstance:
     - target: {fileID: 1721164792056882791, guid: 25e2b65f142fe4246a852fe505f8ad35, type: 3}
       propertyPath: _winText
       value: 
-      objectReference: {fileID: 2043922770}
+      objectReference: {fileID: 0}
     - target: {fileID: 4315558969569189948, guid: 25e2b65f142fe4246a852fe505f8ad35, type: 3}
       propertyPath: m_Name
       value: EnemiesOnPoints
@@ -1021,7 +1011,7 @@ PrefabInstance:
     - target: {fileID: 7464958375277241505, guid: 4383eed0e77c35f4ba0f01e3490e5b24, type: 3}
       propertyPath: _text
       value: 
-      objectReference: {fileID: 2043922771}
+      objectReference: {fileID: 0}
     - target: {fileID: 8166555346848070390, guid: 4383eed0e77c35f4ba0f01e3490e5b24, type: 3}
       propertyPath: m_IsActive
       value: 0
