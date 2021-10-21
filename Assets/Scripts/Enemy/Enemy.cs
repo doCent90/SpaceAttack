@@ -1,100 +1,105 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(EnemyMover))]
 [RequireComponent(typeof(EnemyAnimator))]
+[RequireComponent(typeof(CapsuleCollider))]
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem _bloodFX;
     [SerializeField] private Material _dieMaterial;
-    [SerializeField] private SkinnedMeshRenderer _renderer;
-    [SerializeField] private Color _targetColor;
+    [SerializeField] private bool _isGigant;
+    [Header("Emoji Particals")]
+    [SerializeField] private ParticleSystem _emoji;
+    [SerializeField] private ParticleSystem _emojiLaugh;
 
     private EnemyMover _mover;
-    private AttackState _attackStatePlayer;
+    private Vector4 _currentColor;
+    private Vector4 _targetColor = Color.black;
+    private ParticleSystem[] _particalFX;
+    private SkinnedMeshRenderer _renderer;
+    private EnemyParticals _enemyParticals;
+    private CapsuleCollider _capsuleCollider;
     private SkinnedMeshRenderer _meshRenderer;
-    private Color _currentColor;
-    private bool _hasCurrentColor = true;
-    private bool _isReady = false;
-    private float _elapsedTime = 0;
 
-    private const float _delay = 0.5f;
+    private bool _hasInvisible = false;
+    private float _hitPoints;
+
+    private const float StandartHitPoints = 1f;
+    private const float Multiply = 2f;
 
     public event UnityAction Died;
 
-    public void TakeDamage()
+    public bool IsGigant => _isGigant;
+
+    public void TakeDamage(float damage)
     {
-        _bloodFX.Play();
-        _mover.enabled = true;
+        if (!_hasInvisible)
+        {
+            _hitPoints = !_isGigant? (_hitPoints -= damage) : (_hitPoints -= damage / Multiply);
+        }
 
-        Died?.Invoke();
+        ChangeColor();
+        Die();
+    }
 
-        enabled = false;
+    public void SetTempInvisible(bool hasInvis)
+    {
+        _hasInvisible = hasInvis;
+
+        if (_hasInvisible)
+            _emojiLaugh.Play();
+        else
+            _emojiLaugh.Stop();
+    }
+
+    private void Die()
+    {
+        if (!_hasInvisible && _hitPoints <= 0)
+        {
+            enabled = false;
+
+            Died?.Invoke();
+            SetDieMaterial();
+
+            PlayFX();
+            _mover.enabled = true;
+
+            _emoji.Stop();
+            _capsuleCollider.isTrigger = true;
+        }
+    }
+
+    private void ChangeColor()
+    {
+        _meshRenderer.material.color = Vector4.Lerp(_targetColor, _currentColor, _hitPoints);
+        _emoji.Play();
+    }
+
+    private void PlayFX()
+    {
+        foreach (var partical in _particalFX)
+        {
+            partical.Play();
+        }
     }
 
     private void OnEnable()
     {
         _mover = GetComponent<EnemyMover>();
-        _attackStatePlayer = FindObjectOfType<AttackState>();
+        _capsuleCollider = GetComponent<CapsuleCollider>();
+        _enemyParticals = GetComponentInChildren<EnemyParticals>();
         _meshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
 
-        _attackStatePlayer.ReadyToAttacked += OnReadyToAttack;
+        _renderer = GetComponentInChildren<SkinnedMeshRenderer>();
+        _particalFX = _enemyParticals.GetComponentsInChildren<ParticleSystem>();
+
         _currentColor = _meshRenderer.material.color;
 
-    }
-
-    private void OnDisable()    
-    {
-        _attackStatePlayer.ReadyToAttacked -= OnReadyToAttack;
-        SetDieMaterial();
-    }
-
-    private void OnReadyToAttack(bool isReady)
-    {
-        _isReady = isReady;
+        _hitPoints = StandartHitPoints;
     }
 
     private void SetDieMaterial()
     {
         _renderer.material = _dieMaterial;
-    }
-
-    private void ChangeMaterialColor()
-    {
-        _meshRenderer.material.color = _targetColor;
-    }
-
-    private void ResetMaterialColor()
-    {
-        _meshRenderer.material.color = _currentColor;
-    }
-
-    private void Update()
-    {
-        _elapsedTime += Time.deltaTime;
-
-        if (!_isReady)
-        {
-            if (!_hasCurrentColor)
-                ResetMaterialColor();
-
-            return;
-        }
-        else
-        {
-            if (_hasCurrentColor && _elapsedTime > _delay)
-            {
-                ChangeMaterialColor();
-                _hasCurrentColor = false;
-                _elapsedTime = 0;
-            }
-            else if (!_hasCurrentColor && _elapsedTime > _delay)
-            {
-                ResetMaterialColor();
-                _hasCurrentColor = true;
-                _elapsedTime = 0;
-            }
-        }
     }
 }

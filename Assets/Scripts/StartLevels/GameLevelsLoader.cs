@@ -6,9 +6,12 @@ public class GameLevelsLoader : MonoBehaviour
 {
     [SerializeField] protected int _levelIndex;
 
-    private const string Fail = "Fail";
     private const string LevelDone = "LevelDone";
+    private const string LevelStart = "level_start";
+    private const string LastLevel = "last_level";
     private const int FirstLevel = 1;
+
+    public int Level => _levelIndex;
 
     public event UnityAction<int> StartLevel;
     public event UnityAction<int> EndLevel;
@@ -48,6 +51,9 @@ public class GameLevelsLoader : MonoBehaviour
 
         if (currentLevel > _levelIndex)
             LoadScene(currentLevel);
+
+        Amplitude.Instance.logEvent(LevelStart, currentLevel);
+        Amplitude.Instance.logEvent(LastLevel, currentLevel);
     }
 
     private void LoadScene(int numberLevel)
