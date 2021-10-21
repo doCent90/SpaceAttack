@@ -15,8 +15,8 @@ public class Laser : MonoBehaviour
 
     private const float _hitOffset = 0.1f;
     private const float _noiseTextureLength = 0.5f;
-    private const float _mainTextureLength = 0.3f;
-    private const float _maxLength = 25f;
+    private const float _mainTextureLength = 0.5f;
+    private const float _maxLength = 35f;
 
     private const string MainTexture = "_MainTex";
     private const string Noise = "_Noise";

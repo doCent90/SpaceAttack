@@ -63,7 +63,7 @@ public class PlayerMover : MonoBehaviour
         {
             Moved?.Invoke(true);
             var tweenMove = _rigidbodySpaceShip.DOMove(_wayPoints[_currentPointIndex].transform.position, _moveDuration);
-            tweenMove.SetEase(Ease.InBack);
+            tweenMove.SetEase(Ease.InOutSine);
             tweenMove.OnComplete(ChangeCurrentIndexPosition);
         }
     }
